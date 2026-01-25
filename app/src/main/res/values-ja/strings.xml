@@ -11,6 +11,37 @@
     <string name="logbook_title">交信ログ</string>
     <string name="logbook_empty">交信記録がありません</string>
     <string name="logbook_add">記録を追加</string>
+    <string name="logbook_record_qso">交信を記録</string>
+    <string name="logbook_empty_hint">下のボタンをタップして最初の交信記録を追加</string>
+    <string name="logbook_generate_qsl">QSLカードを生成</string>
+    <string name="logbook_delete_record">記録を削除</string>
+    <string name="logbook_basic_info">基本情報</string>
+    <string name="logbook_callsign">相手コールサイン *</string>
+    <string name="logbook_callsign_placeholder">例: JA1ABC</string>
+    <string name="logbook_frequency">周波数 *</string>
+    <string name="logbook_frequency_placeholder">14.200</string>
+    <string name="logbook_mode">モード</string>
+    <string name="logbook_rst_sent">RST送信</string>
+    <string name="logbook_rst_rcvd">RST受信</string>
+    <string name="logbook_expand_details">詳細を表示（任意）</string>
+    <string name="logbook_collapse_details">詳細を隠す</string>
+    <string name="logbook_their_info">相手情報</string>
+    <string name="logbook_name">氏名</string>
+    <string name="logbook_name_placeholder">OP Name</string>
+    <string name="logbook_qth_placeholder">所在地</string>
+    <string name="logbook_grid_placeholder">PM95wu</string>
+    <string name="logbook_qsl_info">QSL情報</string>
+    <string name="logbook_qsl_info_placeholder">via bureau</string>
+    <string name="logbook_my_info">自局情報</string>
+    <string name="logbook_tx_power">送信出力</string>
+    <string name="logbook_tx_power_placeholder">100W</string>
+    <string name="logbook_rig">リグ/アンテナ</string>
+    <string name="logbook_rig_placeholder">IC-7300</string>
+    <string name="logbook_propagation">伝搬と確認</string>
+    <string name="logbook_propagation_mode">伝搬モード</string>
+    <string name="logbook_qsl_status">QSLステータス</string>
+    <string name="logbook_remarks">備考</string>
+    <string name="logbook_remarks_placeholder">天気、イベント、会話内容など...</string>
     
     <!-- Tools Screen -->
     <string name="tools_title">ツールボックス</string>
@@ -197,6 +228,18 @@
     <string name="sstv_freq_black">黒</string>
     <string name="sstv_freq_white">白</string>
     <string name="sstv_decoder_reset">デコーダーをリセットしました</string>
+    <string name="sstv_grant_permission">マイク権限を付与</string>
+    <string name="sstv_stop_receiving">受信停止</string>
+    <string name="sstv_start_receiving">受信開始</string>
+    <string name="sstv_mic_granted">マイク許可済み</string>
+    <string name="sstv_not_started">未開始</string>
+    <string name="sstv_free_running">フリーラン</string>
+    <string name="sstv_synced">同期済み</string>
+    <string name="sstv_frame_complete">フレーム完了</string>
+    <string name="sstv_no_signal">信号なし</string>
+    <string name="sstv_data">データ</string>
+    <string name="sstv_noise">ノイズ</string>
+    <string name="sstv_unknown_error">不明なエラー</string>
     
     <!-- Export Results -->
     <string name="export_success">%1$d件のレコードをエクスポートしました</string>

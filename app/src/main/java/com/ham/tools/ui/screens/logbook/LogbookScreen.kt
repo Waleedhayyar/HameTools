@@ -122,7 +122,7 @@ fun LogbookScreen(
                 containerColor = MaterialTheme.colorScheme.primaryContainer,
                 contentColor = MaterialTheme.colorScheme.onPrimaryContainer,
                 icon = { Icon(imageVector = Icons.Filled.Add, contentDescription = null) },
-                text = { Text(text = "记录通联") }
+                text = { Text(text = stringResource(R.string.logbook_record_qso)) }
             )
         }
     ) { innerPadding ->
@@ -211,7 +211,7 @@ private fun EmptyLogbookContent(modifier: Modifier = Modifier) {
         )
         Spacer(modifier = Modifier.height(8.dp))
         Text(
-            text = "点击下方按钮添加您的第一条通联记录",
+            text = stringResource(R.string.logbook_empty_hint),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f),
             textAlign = TextAlign.Center
@@ -253,7 +253,7 @@ private fun QsoLogCard(
             onDismissRequest = { showMenu = false }
         ) {
             DropdownMenuItem(
-                text = { Text("生成 QSL 卡片") },
+                text = { Text(stringResource(R.string.logbook_generate_qsl)) },
                 onClick = {
                     showMenu = false
                     onGenerateQsl()
@@ -263,7 +263,7 @@ private fun QsoLogCard(
                 }
             )
             DropdownMenuItem(
-                text = { Text("删除记录", color = MaterialTheme.colorScheme.error) },
+                text = { Text(stringResource(R.string.logbook_delete_record), color = MaterialTheme.colorScheme.error) },
                 onClick = {
                     showMenu = false
                     onDelete()
@@ -435,7 +435,7 @@ private fun AddQsoBottomSheet(
                 .padding(bottom = 32.dp)
         ) {
             Text(
-                text = "记录通联",
+                text = stringResource(R.string.logbook_record_qso),
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onSurface
@@ -444,15 +444,15 @@ private fun AddQsoBottomSheet(
             Spacer(modifier = Modifier.height(20.dp))
             
             // ===== 基本信息 (必填) =====
-            SectionHeader(title = "基本信息")
+            SectionHeader(title = stringResource(R.string.logbook_basic_info))
             Spacer(modifier = Modifier.height(12.dp))
             
             // Callsign
             OutlinedTextField(
                 value = formState.callsign,
                 onValueChange = onCallsignChange,
-                label = { Text("对方呼号 *") },
-                placeholder = { Text("例如: BV2AAA") },
+                label = { Text(stringResource(R.string.logbook_callsign)) },
+                placeholder = { Text(stringResource(R.string.logbook_callsign_placeholder)) },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
                 isError = formState.callsignError != null,
@@ -474,8 +474,8 @@ private fun AddQsoBottomSheet(
                 OutlinedTextField(
                     value = formState.frequency,
                     onValueChange = onFrequencyChange,
-                    label = { Text("频率 *") },
-                    placeholder = { Text("14.200") },
+                    label = { Text(stringResource(R.string.logbook_frequency)) },
+                    placeholder = { Text(stringResource(R.string.logbook_frequency_placeholder)) },
                     modifier = Modifier.weight(1f),
                     singleLine = true,
                     isError = formState.frequencyError != null,
@@ -491,7 +491,7 @@ private fun AddQsoBottomSheet(
             
             // Mode chips
             Text(
-                text = "模式",
+                text = stringResource(R.string.logbook_mode),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -523,7 +523,7 @@ private fun AddQsoBottomSheet(
                 OutlinedTextField(
                     value = formState.rstSent,
                     onValueChange = onRstSentChange,
-                    label = { Text("RST发送") },
+                    label = { Text(stringResource(R.string.logbook_rst_sent)) },
                     modifier = Modifier.weight(1f),
                     singleLine = true,
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -532,7 +532,7 @@ private fun AddQsoBottomSheet(
                 OutlinedTextField(
                     value = formState.rstRcvd,
                     onValueChange = onRstRcvdChange,
-                    label = { Text("RST接收") },
+                    label = { Text(stringResource(R.string.logbook_rst_rcvd)) },
                     modifier = Modifier.weight(1f),
                     singleLine = true,
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -557,7 +557,7 @@ private fun AddQsoBottomSheet(
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    text = if (formState.showAdvanced) "收起详细信息" else "展开详细信息（可选）",
+                    text = if (formState.showAdvanced) stringResource(R.string.logbook_collapse_details) else stringResource(R.string.logbook_expand_details),
                     color = MaterialTheme.colorScheme.primary
                 )
             }
@@ -572,7 +572,7 @@ private fun AddQsoBottomSheet(
                     Spacer(modifier = Modifier.height(8.dp))
                     
                     // 对方信息
-                    SectionHeader(title = "对方信息", icon = Icons.Outlined.Person)
+                    SectionHeader(title = stringResource(R.string.logbook_their_info), icon = Icons.Outlined.Person)
                     Spacer(modifier = Modifier.height(12.dp))
                     
                     Row(
@@ -582,8 +582,8 @@ private fun AddQsoBottomSheet(
                         OutlinedTextField(
                             value = formState.opName,
                             onValueChange = onOpNameChange,
-                            label = { Text("姓名") },
-                            placeholder = { Text("OP Name") },
+                            label = { Text(stringResource(R.string.logbook_name)) },
+                            placeholder = { Text(stringResource(R.string.logbook_name_placeholder)) },
                             modifier = Modifier.weight(1f),
                             singleLine = true,
                             colors = defaultTextFieldColors()
@@ -591,8 +591,8 @@ private fun AddQsoBottomSheet(
                         OutlinedTextField(
                             value = formState.qth,
                             onValueChange = onQthChange,
-                            label = { Text("QTH") },
-                            placeholder = { Text("地点") },
+                            label = { Text(stringResource(R.string.profile_qth)) },
+                            placeholder = { Text(stringResource(R.string.logbook_qth_placeholder)) },
                             modifier = Modifier.weight(1f),
                             singleLine = true,
                             colors = defaultTextFieldColors()
@@ -608,8 +608,8 @@ private fun AddQsoBottomSheet(
                         OutlinedTextField(
                             value = formState.gridLocator,
                             onValueChange = onGridLocatorChange,
-                            label = { Text("网格定位") },
-                            placeholder = { Text("OM89cd") },
+                            label = { Text(stringResource(R.string.profile_grid)) },
+                            placeholder = { Text(stringResource(R.string.logbook_grid_placeholder)) },
                             modifier = Modifier.weight(1f),
                             singleLine = true,
                             keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Characters),
@@ -618,8 +618,8 @@ private fun AddQsoBottomSheet(
                         OutlinedTextField(
                             value = formState.qslInfo,
                             onValueChange = onQslInfoChange,
-                            label = { Text("QSL信息") },
-                            placeholder = { Text("via bureau") },
+                            label = { Text(stringResource(R.string.logbook_qsl_info)) },
+                            placeholder = { Text(stringResource(R.string.logbook_qsl_info_placeholder)) },
                             modifier = Modifier.weight(1f),
                             singleLine = true,
                             colors = defaultTextFieldColors()
@@ -629,7 +629,7 @@ private fun AddQsoBottomSheet(
                     Spacer(modifier = Modifier.height(16.dp))
                     
                     // 我方信息
-                    SectionHeader(title = "我方信息")
+                    SectionHeader(title = stringResource(R.string.logbook_my_info))
                     Spacer(modifier = Modifier.height(12.dp))
                     
                     Row(
@@ -639,8 +639,8 @@ private fun AddQsoBottomSheet(
                         OutlinedTextField(
                             value = formState.txPower,
                             onValueChange = onTxPowerChange,
-                            label = { Text("发射功率") },
-                            placeholder = { Text("100W") },
+                            label = { Text(stringResource(R.string.logbook_tx_power)) },
+                            placeholder = { Text(stringResource(R.string.logbook_tx_power_placeholder)) },
                             modifier = Modifier.weight(1f),
                             singleLine = true,
                             colors = defaultTextFieldColors()
@@ -648,8 +648,8 @@ private fun AddQsoBottomSheet(
                         OutlinedTextField(
                             value = formState.rig,
                             onValueChange = onRigChange,
-                            label = { Text("设备/天线") },
-                            placeholder = { Text("IC-7300") },
+                            label = { Text(stringResource(R.string.logbook_rig)) },
+                            placeholder = { Text(stringResource(R.string.logbook_rig_placeholder)) },
                             modifier = Modifier.weight(1f),
                             singleLine = true,
                             colors = defaultTextFieldColors()
@@ -659,7 +659,7 @@ private fun AddQsoBottomSheet(
                     Spacer(modifier = Modifier.height(16.dp))
                     
                     // 传播与QSL
-                    SectionHeader(title = "传播与确认")
+                    SectionHeader(title = stringResource(R.string.logbook_propagation))
                     Spacer(modifier = Modifier.height(12.dp))
                     
                     // Propagation dropdown
@@ -672,7 +672,7 @@ private fun AddQsoBottomSheet(
                     
                     // QSL Status chips
                     Text(
-                        text = "QSL状态",
+                        text = stringResource(R.string.logbook_qsl_status),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -704,14 +704,14 @@ private fun AddQsoBottomSheet(
                     Spacer(modifier = Modifier.height(16.dp))
                     
                     // 备注
-                    SectionHeader(title = "备注")
+                    SectionHeader(title = stringResource(R.string.logbook_remarks))
                     Spacer(modifier = Modifier.height(12.dp))
                     
                     OutlinedTextField(
                         value = formState.remarks,
                         onValueChange = onRemarksChange,
-                        label = { Text("备注") },
-                        placeholder = { Text("天气、事件、聊天内容等...") },
+                        label = { Text(stringResource(R.string.logbook_remarks)) },
+                        placeholder = { Text(stringResource(R.string.logbook_remarks_placeholder)) },
                         modifier = Modifier.fillMaxWidth(),
                         minLines = 2,
                         maxLines = 4,
@@ -728,7 +728,7 @@ private fun AddQsoBottomSheet(
                 horizontalArrangement = Arrangement.End
             ) {
                 TextButton(onClick = onDismiss) {
-                    Text("取消", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(stringResource(R.string.common_cancel), color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
                 Spacer(modifier = Modifier.width(8.dp))
                 Button(
@@ -739,7 +739,7 @@ private fun AddQsoBottomSheet(
                         contentColor = MaterialTheme.colorScheme.onPrimary
                     )
                 ) {
-                    Text("保存")
+                    Text(stringResource(R.string.common_save))
                 }
             }
         }
@@ -786,7 +786,7 @@ private fun PropagationDropdown(
             value = selected.displayName,
             onValueChange = { },
             readOnly = true,
-            label = { Text("传播模式") },
+            label = { Text(stringResource(R.string.logbook_propagation_mode)) },
             trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
             modifier = Modifier
                 .fillMaxWidth()
