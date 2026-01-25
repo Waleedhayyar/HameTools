@@ -325,8 +325,6 @@
     <string name="qsl_generate_card">生成 QSL 卡片</string>
     <string name="qsl_workshop">QSL 卡片工坊</string>
     <string name="qsl_send_to">发送至 %1$s</string>
-    <string name="qsl_save_to_gallery_desc">保存为 PNG 图片到本地相册</string>
-    <string name="qsl_share_desc">发送到微信、QQ、邮件等</string>
     
     <!-- Propagation Extra -->
     <string name="propagation_k_index_desc">K指数</string>

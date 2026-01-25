@@ -325,8 +325,6 @@
     <string name="qsl_generate_card">QSLカードを生成</string>
     <string name="qsl_workshop">QSLカード作成</string>
     <string name="qsl_send_to">%1$s に送信</string>
-    <string name="qsl_save_to_gallery_desc">PNG画像としてローカルギャラリーに保存</string>
-    <string name="qsl_share_desc">メッセージアプリやメールに送信</string>
     
     <!-- Propagation Extra -->
     <string name="propagation_k_index_desc">K指数</string>

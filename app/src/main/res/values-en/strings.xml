@@ -325,8 +325,6 @@
     <string name="qsl_generate_card">Generate QSL Card</string>
     <string name="qsl_workshop">QSL Card Workshop</string>
     <string name="qsl_send_to">Send to %1$s</string>
-    <string name="qsl_save_to_gallery_desc">Save as PNG image to local gallery</string>
-    <string name="qsl_share_desc">Send to messaging apps, email, etc.</string>
     
     <!-- Propagation Extra -->
     <string name="propagation_k_index_desc">K Index</string>
