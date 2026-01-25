@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HamTools</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_logbook">Logbook</string>
+    <string name="nav_tools">Tools</string>
+    <string name="nav_profile">Profile</string>
+    
+    <!-- Logbook Screen -->
+    <string name="logbook_title">Logbook</string>
+    <string name="logbook_empty">No QSO records yet</string>
+    <string name="logbook_add">Add Record</string>
+    
+    <!-- Tools Screen -->
+    <string name="tools_title">Toolbox</string>
+    <string name="tools_qsl">QSL Card Workshop</string>
+    <string name="tools_cw">CW Practice</string>
+    <string name="tools_q_codes">Q Codes Reference</string>
+    <string name="tools_sstv">SSTV Receiver</string>
+    <string name="tools_locator">Grid Locator</string>
+    <string name="tools_propagation">Propagation</string>
+    
+    <!-- QSL Editor -->
+    <string name="qsl_editor_title">QSL Card Workshop</string>
+    <string name="qsl_save_template">Save Template</string>
+    <string name="qsl_select_background">Select Background</string>
+    <string name="qsl_add_text">Add Text</string>
+    <string name="qsl_generate">Generate Card</string>
+    <string name="qsl_saved_to_gallery">Saved to Gallery</string>
+    <string name="qsl_my_templates">My Templates</string>
+    <string name="qsl_new_template">New Template</string>
+    <string name="qsl_delete_template">Delete Template</string>
+    <string name="qsl_delete_confirm">Are you sure you want to delete template \"%1$s\"? This action cannot be undone.</string>
+    <string name="qsl_add_element">Add Element</string>
+    <string name="qsl_template_name">Template Name</string>
+    <string name="qsl_background_color">Background Color</string>
+    <string name="qsl_callsign_hint">Your callsign %1$s will be auto-filled</string>
+    <string name="qsl_empty_hint">Tap \"Add Element\" below to start designing</string>
+    <string name="qsl_drag_hint">Drag to move, pinch to resize</string>
+    <string name="qsl_export">Export</string>
+    <string name="qsl_export_title">Export QSL Card</string>
+    <string name="qsl_export_choose">Choose Export Method</string>
+    <string name="qsl_save_to_gallery">Save to Gallery</string>
+    <string name="qsl_save_to_gallery_desc">Save as PNG image to local gallery</string>
+    <string name="qsl_share">Share to Other Apps</string>
+    <string name="qsl_share_desc">Send to messaging apps, email, etc.</string>
+    <string name="qsl_share_title">Share QSL Card</string>
+    <string name="qsl_export_success">Saved to Gallery</string>
+    <string name="qsl_export_failed">Save Failed</string>
+    <string name="qsl_share_failed">Share Failed</string>
+    
+    <!-- Profile Screen -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_callsign">Callsign</string>
+    <string name="profile_qso_count">QSO Count</string>
+    <string name="profile_settings">Settings</string>
+    <string name="profile_edit">Edit Profile</string>
+    <string name="profile_license">Amateur Radio License</string>
+    <string name="profile_license_class">License Class</string>
+    <string name="profile_license_expiry">License Expiry</string>
+    <string name="profile_grid">Grid Locator</string>
+    <string name="profile_qth">QTH</string>
+    <string name="profile_stats">QSO Statistics</string>
+    <string name="profile_stats_total">Total</string>
+    <string name="profile_stats_year">This Year</string>
+    <string name="profile_stats_month">This Month</string>
+    <string name="profile_stats_today">Today</string>
+    <string name="profile_band_stats">Band Distribution</string>
+    
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_llm_api">LLM API Configuration</string>
+    <string name="settings_api_key">API Key</string>
+    <string name="settings_backup">Data Backup</string>
+    <string name="settings_export_json">Export JSON</string>
+    <string name="settings_export_csv">Export CSV</string>
+    <string name="settings_last_backup">Last Backup</string>
+    <string name="settings_about">About</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_system">System Default</string>
+    <string name="settings_language_chinese">简体中文</string>
+    <string name="settings_language_english">English</string>
+    <string name="settings_language_japanese">日本語</string>
+    <string name="settings_export_hint">Exported data can be used for backup or import to other logging software</string>
+    
+    <!-- Propagation Screen -->
+    <string name="propagation_title">Propagation</string>
+    <string name="propagation_loading">Loading propagation data…</string>
+    <string name="propagation_error">Loading failed</string>
+    <string name="propagation_retry">Retry</string>
+    <string name="propagation_refresh">Refresh</string>
+    <string name="propagation_solar_indices">Solar/Geomagnetic Indices</string>
+    <string name="propagation_day_conditions">Daytime Propagation</string>
+    <string name="propagation_night_conditions">Nighttime Propagation</string>
+    <string name="propagation_vhf_conditions">VHF Phenomena</string>
+    <string name="propagation_cache_notice">Showing cached data</string>
+    <string name="propagation_sfi">SFI</string>
+    <string name="propagation_k_index">K Index</string>
+    <string name="propagation_a_index">A Index</string>
+    <string name="propagation_geomag">Geomag</string>
+    <string name="propagation_noise">Noise</string>
+    
+    <!-- Grid Locator Screen -->
+    <string name="grid_locator_title">Grid Locator</string>
+    <string name="grid_locator_live">Live Location</string>
+    <string name="grid_locator_manual">Manual Query</string>
+    <string name="grid_locator_acquiring">Acquiring GPS signal…</string>
+    <string name="grid_locator_copy">Copy</string>
+    <string name="grid_locator_share">Share</string>
+    <string name="grid_locator_permission_title">Location Permission Required</string>
+    <string name="grid_locator_permission_desc">Grid Locator needs access to your location to calculate the Maidenhead grid code.</string>
+    <string name="grid_locator_grant_permission">Grant Permission</string>
+    <string name="grid_locator_retry">Retry</string>
+    <string name="grid_locator_forward_calc">Forward: Lat/Lon → Grid</string>
+    <string name="grid_locator_reverse_calc">Reverse: Grid → Lat/Lon</string>
+    <string name="grid_locator_calculate">Calculate</string>
+    <string name="grid_locator_open_map">View on Map</string>
+    <string name="grid_locator_clear">Clear</string>
+    
+    <!-- Common UI Elements -->
+    <string name="common_save">Save</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_confirm">OK</string>
+    <string name="common_skip">Skip</string>
+    <string name="common_continue">Continue</string>
+    <string name="common_start">Get Started</string>
+    <string name="common_edit">Edit</string>
+    <string name="common_back">Back</string>
+    <string name="common_reset">Reset</string>
+    <string name="common_export_failed">Export failed</string>
+    
+    <!-- License Card -->
+    <string name="license_title">Amateur Radio License</string>
+    <string name="license_tap_to_flip">Tap to flip →</string>
+    <string name="license_tap_to_set_callsign">Tap to set callsign</string>
+    <string name="license_photo">License Photo</string>
+    <string name="license_add_photo">Add license photo</string>
+    <string name="license_add_photo_button">Add License Photo</string>
+    <string name="license_valid_until">Valid Until</string>
+    <string name="license_not_set">Not Set</string>
+    <string name="license_expired">Expired</string>
+    <string name="license_expiring_soon">Expiring Soon</string>
+    <string name="license_class_a">Class A</string>
+    <string name="license_class_b">Class B</string>
+    <string name="license_class_c">Class C</string>
+    <string name="license_class_none">Not Set</string>
+    <string name="license_expiry_date">License Expiry Date</string>
+    <string name="license_select_date">Select Date</string>
+    <string name="license_select_date_hint">Tap to select date</string>
+    
+    <!-- Profile Edit -->
+    <string name="profile_edit_title">Edit Profile</string>
+    <string name="profile_callsign_label">Callsign *</string>
+    <string name="profile_callsign_placeholder">e.g. W1ABC</string>
+    <string name="profile_name_label">Name</string>
+    <string name="profile_grid_placeholder">e.g. FN42ig</string>
+    <string name="profile_qth_label">QTH (Location)</string>
+    <string name="profile_qth_placeholder">e.g. New York</string>
+    
+    <!-- Quick Actions -->
+    <string name="quick_action_settings">Settings</string>
+    <string name="quick_action_settings_subtitle">Data backup and export</string>
+    <string name="quick_action_about">About</string>
+    <string name="quick_action_about_subtitle">HamTools v1.0.0</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">Welcome to HamTools</string>
+    <string name="onboarding_tagline">The ultimate toolbox for amateur radio enthusiasts</string>
+    <string name="onboarding_features_title">Powerful Features</string>
+    <string name="onboarding_feature_logbook">Logbook</string>
+    <string name="onboarding_feature_logbook_desc">Record and manage your QSO contacts</string>
+    <string name="onboarding_feature_propagation">Propagation</string>
+    <string name="onboarding_feature_propagation_desc">Real-time HF band propagation conditions</string>
+    <string name="onboarding_feature_tools">Tools</string>
+    <string name="onboarding_feature_tools_desc">QSL cards, CW practice, Q codes, and more</string>
+    <string name="onboarding_setup_callsign">Set Your Callsign</string>
+    <string name="onboarding_setup_callsign_hint">Enter your amateur radio callsign\nYou can change it later in settings</string>
+    <string name="onboarding_callsign_label">Callsign</string>
+    <string name="onboarding_callsign_placeholder">e.g. W1ABC</string>
+    <string name="onboarding_looks_good">Looks good!</string>
+    
+    <!-- SSTV -->
+    <string name="sstv_need_permission">Microphone permission required</string>
+    <string name="sstv_stop_decode">Stop Decoding</string>
+    <string name="sstv_start_decode">Start Decoding</string>
+    <string name="sstv_waiting">Waiting to start...</string>
+    <string name="sstv_stopped">Stopped</string>
+    <string name="sstv_tap_to_start">Tap to start receiving</string>
+    <string name="sstv_recent_completed">Recently Completed</string>
+    <string name="sstv_auto_mode">Auto Mode Detection</string>
+    <string name="sstv_auto_mode_on">Auto-detect via VIS code</string>
+    <string name="sstv_auto_mode_off">Manual mode selection</string>
+    <string name="sstv_select_mode">Select Mode</string>
+    <string name="sstv_tuning_indicator">Tuning Indicator</string>
+    <string name="sstv_freq_sync">Sync</string>
+    <string name="sstv_freq_black">Black</string>
+    <string name="sstv_freq_white">White</string>
+    <string name="sstv_decoder_reset">Decoder reset</string>
+    
+    <!-- Export Results -->
+    <string name="export_success">Successfully exported %1$d records</string>
+    <string name="export_error">Export failed: %1$s</string>
+</resources>

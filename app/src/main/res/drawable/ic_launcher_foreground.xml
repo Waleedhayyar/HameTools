@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Radio/Ham antenna icon -->
+    <group android:translateX="27" android:translateY="27">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M27,5 L27,25 M27,15 L37,5 M27,15 L17,5 M27,35 L27,45 M22,40 L32,40 M17,45 L37,45 M10,50 L44,50 L44,54 L10,54 Z"/>
+        <path
+            android:fillColor="#FFFFFF"
+            android:strokeWidth="3"
+            android:strokeColor="#FFFFFF"
+            android:pathData="M27,8 L27,28"/>
+        <path
+            android:fillColor="#FFFFFF"
+            android:strokeWidth="2.5"
+            android:strokeColor="#FFFFFF"
+            android:pathData="M27,18 L35,10"/>
+        <path
+            android:fillColor="#FFFFFF"
+            android:strokeWidth="2.5"
+            android:strokeColor="#FFFFFF"
+            android:pathData="M27,18 L19,10"/>
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M20,30 L34,30 L34,46 L20,46 Z"/>
+        <path
+            android:fillColor="#006B5E"
+            android:pathData="M23,33 L31,33 L31,36 L23,36 Z"/>
+        <path
+            android:fillColor="#006B5E"
+            android:pathData="M24,39 L26,39 L26,43 L24,43 Z"/>
+        <path
+            android:fillColor="#006B5E"
+            android:pathData="M28,39 L30,39 L30,43 L28,43 Z"/>
+    </group>
+</vector>

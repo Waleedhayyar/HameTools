@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Fallback colors when dynamic color is not available -->
+    <color name="seed">#006B5E</color>
+    <color name="primary">#006B5E</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="primaryContainer">#76F8E1</color>
+    <color name="onPrimaryContainer">#00201B</color>
+    <color name="secondary">#4A635D</color>
+    <color name="onSecondary">#FFFFFF</color>
+    <color name="secondaryContainer">#CCE8E0</color>
+    <color name="onSecondaryContainer">#06201B</color>
+    <color name="tertiary">#446179</color>
+    <color name="onTertiary">#FFFFFF</color>
+    <color name="tertiaryContainer">#CAE6FF</color>
+    <color name="onTertiaryContainer">#001E30</color>
+    <color name="error">#BA1A1A</color>
+    <color name="onError">#FFFFFF</color>
+    <color name="errorContainer">#FFDAD6</color>
+    <color name="onErrorContainer">#410002</color>
+    <color name="background">#FAFDFA</color>
+    <color name="onBackground">#191C1B</color>
+    <color name="surface">#FAFDFA</color>
+    <color name="onSurface">#191C1B</color>
+</resources>

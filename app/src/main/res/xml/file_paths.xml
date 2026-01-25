@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- 用于分享 QSL 卡片的缓存目录 -->
+    <cache-path
+        name="shared_qsl"
+        path="shared_qsl/" />
+</paths>

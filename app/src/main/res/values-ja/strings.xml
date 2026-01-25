@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HamTools</string>
+    
+    <!-- Bottom Navigation -->
+    <string name="nav_logbook">ログ</string>
+    <string name="nav_tools">ツール</string>
+    <string name="nav_profile">プロフィール</string>
+    
+    <!-- Logbook Screen -->
+    <string name="logbook_title">交信ログ</string>
+    <string name="logbook_empty">交信記録がありません</string>
+    <string name="logbook_add">記録を追加</string>
+    
+    <!-- Tools Screen -->
+    <string name="tools_title">ツールボックス</string>
+    <string name="tools_qsl">QSLカード作成</string>
+    <string name="tools_cw">CW練習</string>
+    <string name="tools_q_codes">Qコード一覧</string>
+    <string name="tools_sstv">SSTV受信</string>
+    <string name="tools_locator">グリッドロケーター</string>
+    <string name="tools_propagation">伝搬予測</string>
+    
+    <!-- QSL Editor -->
+    <string name="qsl_editor_title">QSLカード作成</string>
+    <string name="qsl_save_template">テンプレート保存</string>
+    <string name="qsl_select_background">背景を選択</string>
+    <string name="qsl_add_text">テキスト追加</string>
+    <string name="qsl_generate">カード生成</string>
+    <string name="qsl_saved_to_gallery">ギャラリーに保存しました</string>
+    <string name="qsl_my_templates">マイテンプレート</string>
+    <string name="qsl_new_template">新規テンプレート</string>
+    <string name="qsl_delete_template">テンプレート削除</string>
+    <string name="qsl_delete_confirm">テンプレート「%1$s」を削除しますか？この操作は取り消せません。</string>
+    <string name="qsl_add_element">要素を追加</string>
+    <string name="qsl_template_name">テンプレート名</string>
+    <string name="qsl_background_color">背景色</string>
+    <string name="qsl_callsign_hint">コールサイン %1$s が自動入力されます</string>
+    <string name="qsl_empty_hint">「要素を追加」をタップしてデザインを開始</string>
+    <string name="qsl_drag_hint">ドラッグで移動、ピンチでサイズ変更</string>
+    <string name="qsl_export">エクスポート</string>
+    <string name="qsl_export_title">QSLカードをエクスポート</string>
+    <string name="qsl_export_choose">エクスポート方法を選択</string>
+    <string name="qsl_save_to_gallery">ギャラリーに保存</string>
+    <string name="qsl_save_to_gallery_desc">PNG画像としてローカルに保存</string>
+    <string name="qsl_share">他のアプリに共有</string>
+    <string name="qsl_share_desc">メッセージアプリやメールに送信</string>
+    <string name="qsl_share_title">QSLカードを共有</string>
+    <string name="qsl_export_success">ギャラリーに保存しました</string>
+    <string name="qsl_export_failed">保存に失敗しました</string>
+    <string name="qsl_share_failed">共有に失敗しました</string>
+    
+    <!-- Profile Screen -->
+    <string name="profile_title">プロフィール</string>
+    <string name="profile_callsign">コールサイン</string>
+    <string name="profile_qso_count">交信回数</string>
+    <string name="profile_settings">設定</string>
+    <string name="profile_edit">プロフィール編集</string>
+    <string name="profile_license">アマチュア無線従事者免許</string>
+    <string name="profile_license_class">資格</string>
+    <string name="profile_license_expiry">有効期限</string>
+    <string name="profile_grid">グリッドロケーター</string>
+    <string name="profile_qth">QTH</string>
+    <string name="profile_stats">交信統計</string>
+    <string name="profile_stats_total">総交信</string>
+    <string name="profile_stats_year">今年</string>
+    <string name="profile_stats_month">今月</string>
+    <string name="profile_stats_today">今日</string>
+    <string name="profile_band_stats">バンド分布</string>
+    
+    <!-- Settings -->
+    <string name="settings_title">設定</string>
+    <string name="settings_llm_api">LLM API設定</string>
+    <string name="settings_api_key">APIキー</string>
+    <string name="settings_backup">データバックアップ</string>
+    <string name="settings_export_json">JSONエクスポート</string>
+    <string name="settings_export_csv">CSVエクスポート</string>
+    <string name="settings_last_backup">最終バックアップ</string>
+    <string name="settings_about">アプリについて</string>
+    <string name="settings_language">言語</string>
+    <string name="settings_language_system">システム設定に従う</string>
+    <string name="settings_language_chinese">简体中文</string>
+    <string name="settings_language_english">English</string>
+    <string name="settings_language_japanese">日本語</string>
+    <string name="settings_export_hint">エクスポートしたデータはバックアップや他のログソフトへのインポートに使用できます</string>
+    
+    <!-- Propagation Screen -->
+    <string name="propagation_title">伝搬予測</string>
+    <string name="propagation_loading">伝搬データを取得中…</string>
+    <string name="propagation_error">読み込みに失敗しました</string>
+    <string name="propagation_retry">再試行</string>
+    <string name="propagation_refresh">更新</string>
+    <string name="propagation_solar_indices">太陽/地磁気指数</string>
+    <string name="propagation_day_conditions">昼間の伝搬状況</string>
+    <string name="propagation_night_conditions">夜間の伝搬状況</string>
+    <string name="propagation_vhf_conditions">VHF伝搬現象</string>
+    <string name="propagation_cache_notice">キャッシュデータを表示中</string>
+    <string name="propagation_sfi">SFI</string>
+    <string name="propagation_k_index">K指数</string>
+    <string name="propagation_a_index">A指数</string>
+    <string name="propagation_geomag">地磁気</string>
+    <string name="propagation_noise">ノイズ</string>
+    
+    <!-- Grid Locator Screen -->
+    <string name="grid_locator_title">グリッドロケーター</string>
+    <string name="grid_locator_live">リアルタイム測位</string>
+    <string name="grid_locator_manual">手動検索</string>
+    <string name="grid_locator_acquiring">GPS信号を取得中…</string>
+    <string name="grid_locator_copy">コピー</string>
+    <string name="grid_locator_share">共有</string>
+    <string name="grid_locator_permission_title">位置情報の許可が必要</string>
+    <string name="grid_locator_permission_desc">グリッドロケーターは現在地のメイデンヘッドグリッドを計算するため、位置情報へのアクセスが必要です。</string>
+    <string name="grid_locator_grant_permission">許可する</string>
+    <string name="grid_locator_retry">再試行</string>
+    <string name="grid_locator_forward_calc">順方向：緯度経度 → グリッド</string>
+    <string name="grid_locator_reverse_calc">逆方向：グリッド → 緯度経度</string>
+    <string name="grid_locator_calculate">計算</string>
+    <string name="grid_locator_open_map">地図で表示</string>
+    <string name="grid_locator_clear">クリア</string>
+    
+    <!-- Common UI Elements -->
+    <string name="common_save">保存</string>
+    <string name="common_cancel">キャンセル</string>
+    <string name="common_confirm">OK</string>
+    <string name="common_skip">スキップ</string>
+    <string name="common_continue">続ける</string>
+    <string name="common_start">はじめる</string>
+    <string name="common_edit">編集</string>
+    <string name="common_back">戻る</string>
+    <string name="common_reset">リセット</string>
+    <string name="common_export_failed">エクスポートに失敗しました</string>
+    
+    <!-- License Card -->
+    <string name="license_title">アマチュア無線従事者免許</string>
+    <string name="license_tap_to_flip">タップで裏面へ →</string>
+    <string name="license_tap_to_set_callsign">タップしてコールサインを設定</string>
+    <string name="license_photo">免許証写真</string>
+    <string name="license_add_photo">免許証写真を追加</string>
+    <string name="license_add_photo_button">免許証写真を追加</string>
+    <string name="license_valid_until">有効期限</string>
+    <string name="license_not_set">未設定</string>
+    <string name="license_expired">期限切れ</string>
+    <string name="license_expiring_soon">もうすぐ期限切れ</string>
+    <string name="license_class_a">第一級</string>
+    <string name="license_class_b">第二級</string>
+    <string name="license_class_c">第三級</string>
+    <string name="license_class_none">未設定</string>
+    <string name="license_expiry_date">免許証有効期限</string>
+    <string name="license_select_date">日付を選択</string>
+    <string name="license_select_date_hint">タップして日付を選択</string>
+    
+    <!-- Profile Edit -->
+    <string name="profile_edit_title">プロフィール編集</string>
+    <string name="profile_callsign_label">コールサイン *</string>
+    <string name="profile_callsign_placeholder">例: JA1ABC</string>
+    <string name="profile_name_label">氏名</string>
+    <string name="profile_grid_placeholder">例: PM95wu</string>
+    <string name="profile_qth_label">QTH (所在地)</string>
+    <string name="profile_qth_placeholder">例: 東京</string>
+    
+    <!-- Quick Actions -->
+    <string name="quick_action_settings">設定</string>
+    <string name="quick_action_settings_subtitle">データバックアップとエクスポート</string>
+    <string name="quick_action_about">アプリについて</string>
+    <string name="quick_action_about_subtitle">HamTools v1.0.0</string>
+    
+    <!-- Onboarding -->
+    <string name="onboarding_welcome">HamToolsへようこそ</string>
+    <string name="onboarding_tagline">アマチュア無線愛好家のためのオールインワンツール</string>
+    <string name="onboarding_features_title">充実した機能</string>
+    <string name="onboarding_feature_logbook">交信ログ</string>
+    <string name="onboarding_feature_logbook_desc">QSO記録を管理</string>
+    <string name="onboarding_feature_propagation">伝搬予測</string>
+    <string name="onboarding_feature_propagation_desc">リアルタイムのHFバンドコンディション</string>
+    <string name="onboarding_feature_tools">ツール</string>
+    <string name="onboarding_feature_tools_desc">QSLカード、CW練習、Qコードなど</string>
+    <string name="onboarding_setup_callsign">コールサインを設定</string>
+    <string name="onboarding_setup_callsign_hint">アマチュア無線のコールサインを入力\n後で設定から変更できます</string>
+    <string name="onboarding_callsign_label">コールサイン</string>
+    <string name="onboarding_callsign_placeholder">例: JA1ABC</string>
+    <string name="onboarding_looks_good">いい感じです！</string>
+    
+    <!-- SSTV -->
+    <string name="sstv_need_permission">マイクの許可が必要です</string>
+    <string name="sstv_stop_decode">デコード停止</string>
+    <string name="sstv_start_decode">デコード開始</string>
+    <string name="sstv_waiting">開始待機中...</string>
+    <string name="sstv_stopped">停止中</string>
+    <string name="sstv_tap_to_start">タップして受信開始</string>
+    <string name="sstv_recent_completed">最近完了</string>
+    <string name="sstv_auto_mode">自動モード検出</string>
+    <string name="sstv_auto_mode_on">VISコードで自動識別</string>
+    <string name="sstv_auto_mode_off">手動モード選択</string>
+    <string name="sstv_select_mode">モードを選択</string>
+    <string name="sstv_tuning_indicator">チューニングインジケーター</string>
+    <string name="sstv_freq_sync">同期</string>
+    <string name="sstv_freq_black">黒</string>
+    <string name="sstv_freq_white">白</string>
+    <string name="sstv_decoder_reset">デコーダーをリセットしました</string>
+    
+    <!-- Export Results -->
+    <string name="export_success">%1$d件のレコードをエクスポートしました</string>
+    <string name="export_error">エクスポートに失敗しました: %1$s</string>
+</resources>
