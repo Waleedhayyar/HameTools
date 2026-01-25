@@ -413,7 +413,7 @@ private fun SolarIndicesCard(data: SolarData) {
                     IndexChip(
                         label = "K",
                         value = data.kIndex.toString(),
-                        description = "K指数",
+                        description = stringResource(R.string.propagation_k_index_desc),
                         color = getKIndexColor(data.kIndex)
                     )
                 }
@@ -421,7 +421,7 @@ private fun SolarIndicesCard(data: SolarData) {
                     IndexChip(
                         label = "A",
                         value = data.aIndex.toString(),
-                        description = "A指数",
+                        description = stringResource(R.string.propagation_a_index_desc),
                         color = getAIndexColor(data.aIndex)
                     )
                 }
@@ -457,7 +457,7 @@ private fun SolarIndicesCard(data: SolarData) {
                         ExtraInfo(label = stringResource(R.string.propagation_solar_wind), value = "${it} km/s")
                     }
                     data.xRay?.let {
-                        ExtraInfo(label = "X射线", value = it)
+                        ExtraInfo(label = stringResource(R.string.propagation_xray), value = it)
                     }
                 }
             }

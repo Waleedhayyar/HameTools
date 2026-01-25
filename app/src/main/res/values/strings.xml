@@ -320,4 +320,97 @@
     <string name="qsl_delete">删除</string>
     <string name="qsl_save_to_gallery_short">保存到相册</string>
     <string name="qsl_share_to_apps">分享到其他应用</string>
+    
+    <!-- QSL Editor Extra -->
+    <string name="qsl_generate_card">生成 QSL 卡片</string>
+    <string name="qsl_workshop">QSL 卡片工坊</string>
+    <string name="qsl_send_to">发送至 %1$s</string>
+    <string name="qsl_save_to_gallery_desc">保存为 PNG 图片到本地相册</string>
+    <string name="qsl_share_desc">发送到微信、QQ、邮件等</string>
+    
+    <!-- Propagation Extra -->
+    <string name="propagation_k_index_desc">K指数</string>
+    <string name="propagation_a_index_desc">A指数</string>
+    <string name="propagation_xray">X射线</string>
+    
+    <!-- Q Codes Categories -->
+    <string name="qcodes_cat_general">通用</string>
+    <string name="qcodes_cat_frequency">频率</string>
+    <string name="qcodes_cat_signal">信号</string>
+    <string name="qcodes_cat_interference">干扰</string>
+    <string name="qcodes_cat_power">功率</string>
+    <string name="qcodes_cat_speed">速度</string>
+    <string name="qcodes_cat_time">时间</string>
+    <string name="qcodes_cat_call">呼叫</string>
+    <string name="qcodes_cat_technical">技术</string>
+    <string name="qcodes_cat_confirm">确认</string>
+    <string name="qcodes_cat_qso">通联</string>
+    <string name="qcodes_cat_relay">转发</string>
+    <string name="qcodes_cat_broadcast">广播</string>
+    <string name="qcodes_cat_message">报文</string>
+    <string name="qcodes_cat_location">位置</string>
+    
+    <!-- Q Codes Content -->
+    <string name="qcode_qra_q">你的电台名称是什么？</string>
+    <string name="qcode_qra_a">我的电台名称是...</string>
+    <string name="qcode_qrb_q">你离我台有多远？</string>
+    <string name="qcode_qrb_a">我们相距约...公里</string>
+    <string name="qcode_qrg_q">你能告诉我准确频率吗？</string>
+    <string name="qcode_qrg_a">你的准确频率是...kHz</string>
+    <string name="qcode_qrh_q">我的频率有漂移吗？</string>
+    <string name="qcode_qrh_a">你的频率有漂移</string>
+    <string name="qcode_qri_q">我的音调如何？</string>
+    <string name="qcode_qri_a">你的音调是...</string>
+    <string name="qcode_qrk_q">我的信号可辨度如何？</string>
+    <string name="qcode_qrk_a">你的信号可辨度是...(1–5)</string>
+    <string name="qcode_qrl_q">你忙吗？</string>
+    <string name="qcode_qrl_a">我正忙，请勿干扰</string>
+    <string name="qcode_qrm_q">你受到他台干扰吗？</string>
+    <string name="qcode_qrm_a">我正受到他台干扰</string>
+    <string name="qcode_qrn_q">你受到天电干扰吗？</string>
+    <string name="qcode_qrn_a">我正受到天电干扰</string>
+    <string name="qcode_qro_q">我需要增加功率吗？</string>
+    <string name="qcode_qro_a">请增加发射功率</string>
+    <string name="qcode_qrp_q">我需要减小功率吗？</string>
+    <string name="qcode_qrp_a">请减小发射功率</string>
+    <string name="qcode_qrq_q">我发送得太快吗？</string>
+    <string name="qcode_qrq_a">请发送得快一些</string>
+    <string name="qcode_qrs_q">我发送得太慢吗？</string>
+    <string name="qcode_qrs_a">请发送得慢一些</string>
+    <string name="qcode_qrt_q">我应该停止发送吗？</string>
+    <string name="qcode_qrt_a">请停止发送/我即将关机</string>
+    <string name="qcode_qru_q">你有事给我吗？</string>
+    <string name="qcode_qru_a">我没有事给你</string>
+    <string name="qcode_qrv_q">你准备好了吗？</string>
+    <string name="qcode_qrv_a">我准备好了</string>
+    <string name="qcode_qrx_q">你何时再呼叫我？</string>
+    <string name="qcode_qrx_a">请在...时再呼叫我</string>
+    <string name="qcode_qrz_q">谁在呼叫我？</string>
+    <string name="qcode_qrz_a">你被...呼叫（在...kHz上）</string>
+    <string name="qcode_qsa_q">我的信号强度如何？</string>
+    <string name="qcode_qsa_a">你的信号强度是...(1–5)</string>
+    <string name="qcode_qsb_q">我的信号有衰落吗？</string>
+    <string name="qcode_qsb_a">你的信号有衰落</string>
+    <string name="qcode_qsd_q">我的发报有缺点吗？</string>
+    <string name="qcode_qsd_a">你的发报有缺点</string>
+    <string name="qcode_qsk_q">你能听到我在你信号之间吗？</string>
+    <string name="qcode_qsk_a">我能听到你在我信号之间，请插入</string>
+    <string name="qcode_qsl_q">你能确认收妥吗？</string>
+    <string name="qcode_qsl_a">我确认收妥</string>
+    <string name="qcode_qso_q">你能与...直接通信吗？</string>
+    <string name="qcode_qso_a">我能与...直接通信</string>
+    <string name="qcode_qsp_q">你能转告...吗？</string>
+    <string name="qcode_qsp_a">我可以转告...</string>
+    <string name="qcode_qst_q">这是给所有电台的通告</string>
+    <string name="qcode_qst_a">这是给所有电台的通告</string>
+    <string name="qcode_qsx_q">你在...kHz上守听吗？</string>
+    <string name="qcode_qsx_a">我在...kHz上守听</string>
+    <string name="qcode_qsy_q">我应该改频吗？</string>
+    <string name="qcode_qsy_a">请改频到...kHz</string>
+    <string name="qcode_qtc_q">你有多少份报要发？</string>
+    <string name="qcode_qtc_a">我有...份报要发</string>
+    <string name="qcode_qth_q">你的位置是？</string>
+    <string name="qcode_qth_a">我的位置是...</string>
+    <string name="qcode_qtr_q">现在准确时间是？</string>
+    <string name="qcode_qtr_a">准确时间是...</string>
 </resources>

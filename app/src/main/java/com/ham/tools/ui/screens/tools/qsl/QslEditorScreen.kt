@@ -182,13 +182,13 @@ fun QslEditorScreen(
                 title = { 
                     Column {
                         Text(
-                            text = if (state.isGenerateMode) "生成 QSL 卡片" else "QSL 卡片工坊",
+                            text = if (state.isGenerateMode) stringResource(R.string.qsl_generate_card) else stringResource(R.string.qsl_workshop),
                             style = MaterialTheme.typography.headlineMedium,
                             fontWeight = FontWeight.Bold
                         )
                         Text(
                             text = if (state.isGenerateMode) {
-                                state.qsoLog?.let { "发送至 ${it.callsign}" } ?: state.templateName
+                                state.qsoLog?.let { stringResource(R.string.qsl_send_to, it.callsign) } ?: state.templateName
                             } else {
                                 state.templateName
                             },
@@ -1214,7 +1214,7 @@ private fun ExportDialog(
                                 color = MaterialTheme.colorScheme.onPrimaryContainer
                             )
                             Text(
-                                text = "保存为 PNG 图片到本地相册",
+                                text = stringResource(R.string.qsl_save_to_gallery_desc),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.8f)
                             )
@@ -1255,7 +1255,7 @@ private fun ExportDialog(
                                 color = MaterialTheme.colorScheme.onSecondaryContainer
                             )
                             Text(
-                                text = "发送到微信、QQ、邮件等",
+                                text = stringResource(R.string.qsl_share_desc),
                                 style = MaterialTheme.typography.bodySmall,
                                 color = MaterialTheme.colorScheme.onSecondaryContainer.copy(alpha = 0.8f)
                             )

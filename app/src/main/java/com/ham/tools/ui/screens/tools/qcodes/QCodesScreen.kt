@@ -54,45 +54,60 @@ data class QCode(
 )
 
 /**
- * Complete list of common Q codes
+ * Get localized Q codes list based on current locale
  */
-private val qCodesList = listOf(
-    // 通用
-    QCode("QRA", "你的电台名称是什么？", "我的电台名称是...", "通用"),
-    QCode("QRB", "你离我台有多远？", "我们相距约...公里", "通用"),
-    QCode("QRG", "你能告诉我准确频率吗？", "你的准确频率是...kHz", "频率"),
-    QCode("QRH", "我的频率有漂移吗？", "你的频率有漂移", "频率"),
-    QCode("QRI", "我的音调如何？", "你的音调是...", "信号"),
-    QCode("QRK", "我的信号可辨度如何？", "你的信号可辨度是...(1-5)", "信号"),
-    QCode("QRL", "你忙吗？", "我正忙，请勿干扰", "通用"),
-    QCode("QRM", "你受到他台干扰吗？", "我正受到他台干扰", "干扰"),
-    QCode("QRN", "你受到天电干扰吗？", "我正受到天电干扰", "干扰"),
-    QCode("QRO", "我需要增加功率吗？", "请增加发射功率", "功率"),
-    QCode("QRP", "我需要减小功率吗？", "请减小发射功率", "功率"),
-    QCode("QRQ", "我发送得太快吗？", "请发送得快一些", "速度"),
-    QCode("QRS", "我发送得太慢吗？", "请发送得慢一些", "速度"),
-    QCode("QRT", "我应该停止发送吗？", "请停止发送/我即将关机", "通用"),
-    QCode("QRU", "你有事给我吗？", "我没有事给你", "通用"),
-    QCode("QRV", "你准备好了吗？", "我准备好了", "通用"),
-    QCode("QRX", "你何时再呼叫我？", "请在...时再呼叫我", "时间"),
-    QCode("QRZ", "谁在呼叫我？", "你被...呼叫（在...kHz上）", "呼叫"),
-    QCode("QSA", "我的信号强度如何？", "你的信号强度是...(1-5)", "信号"),
-    QCode("QSB", "我的信号有衰落吗？", "你的信号有衰落", "信号"),
-    QCode("QSD", "我的发报有缺点吗？", "你的发报有缺点", "信号"),
-    QCode("QSK", "你能听到我在你信号之间吗？", "我能听到你在我信号之间，请插入", "技术"),
-    QCode("QSL", "你能确认收妥吗？", "我确认收妥", "确认"),
-    QCode("QSO", "你能与...直接通信吗？", "我能与...直接通信", "通联"),
-    QCode("QSP", "你能转告...吗？", "我可以转告...", "转发"),
-    QCode("QST", "这是给所有电台的通告", "这是给所有电台的通告", "广播"),
-    QCode("QSX", "你在...kHz上守听吗？", "我在...kHz上守听", "频率"),
-    QCode("QSY", "我应该改频吗？", "请改频到...kHz", "频率"),
-    QCode("QTC", "你有多少份报要发？", "我有...份报要发", "报文"),
-    QCode("QTH", "你的位置是？", "我的位置是...", "位置"),
-    QCode("QTR", "现在准确时间是？", "准确时间是...", "时间"),
-    // 业余无线电常用
-    QCode("QRG", "请告诉我准确频率", "你的准确频率是...", "频率"),
-    QCode("QSS", "你使用什么工作频率？", "我使用...kHz工作", "频率"),
-)
+@Composable
+private fun getLocalizedQCodes(): List<QCode> {
+    val catGeneral = stringResource(R.string.qcodes_cat_general)
+    val catFrequency = stringResource(R.string.qcodes_cat_frequency)
+    val catSignal = stringResource(R.string.qcodes_cat_signal)
+    val catInterference = stringResource(R.string.qcodes_cat_interference)
+    val catPower = stringResource(R.string.qcodes_cat_power)
+    val catSpeed = stringResource(R.string.qcodes_cat_speed)
+    val catTime = stringResource(R.string.qcodes_cat_time)
+    val catCall = stringResource(R.string.qcodes_cat_call)
+    val catTechnical = stringResource(R.string.qcodes_cat_technical)
+    val catConfirm = stringResource(R.string.qcodes_cat_confirm)
+    val catQso = stringResource(R.string.qcodes_cat_qso)
+    val catRelay = stringResource(R.string.qcodes_cat_relay)
+    val catBroadcast = stringResource(R.string.qcodes_cat_broadcast)
+    val catMessage = stringResource(R.string.qcodes_cat_message)
+    val catLocation = stringResource(R.string.qcodes_cat_location)
+    
+    return listOf(
+        QCode("QRA", stringResource(R.string.qcode_qra_q), stringResource(R.string.qcode_qra_a), catGeneral),
+        QCode("QRB", stringResource(R.string.qcode_qrb_q), stringResource(R.string.qcode_qrb_a), catGeneral),
+        QCode("QRG", stringResource(R.string.qcode_qrg_q), stringResource(R.string.qcode_qrg_a), catFrequency),
+        QCode("QRH", stringResource(R.string.qcode_qrh_q), stringResource(R.string.qcode_qrh_a), catFrequency),
+        QCode("QRI", stringResource(R.string.qcode_qri_q), stringResource(R.string.qcode_qri_a), catSignal),
+        QCode("QRK", stringResource(R.string.qcode_qrk_q), stringResource(R.string.qcode_qrk_a), catSignal),
+        QCode("QRL", stringResource(R.string.qcode_qrl_q), stringResource(R.string.qcode_qrl_a), catGeneral),
+        QCode("QRM", stringResource(R.string.qcode_qrm_q), stringResource(R.string.qcode_qrm_a), catInterference),
+        QCode("QRN", stringResource(R.string.qcode_qrn_q), stringResource(R.string.qcode_qrn_a), catInterference),
+        QCode("QRO", stringResource(R.string.qcode_qro_q), stringResource(R.string.qcode_qro_a), catPower),
+        QCode("QRP", stringResource(R.string.qcode_qrp_q), stringResource(R.string.qcode_qrp_a), catPower),
+        QCode("QRQ", stringResource(R.string.qcode_qrq_q), stringResource(R.string.qcode_qrq_a), catSpeed),
+        QCode("QRS", stringResource(R.string.qcode_qrs_q), stringResource(R.string.qcode_qrs_a), catSpeed),
+        QCode("QRT", stringResource(R.string.qcode_qrt_q), stringResource(R.string.qcode_qrt_a), catGeneral),
+        QCode("QRU", stringResource(R.string.qcode_qru_q), stringResource(R.string.qcode_qru_a), catGeneral),
+        QCode("QRV", stringResource(R.string.qcode_qrv_q), stringResource(R.string.qcode_qrv_a), catGeneral),
+        QCode("QRX", stringResource(R.string.qcode_qrx_q), stringResource(R.string.qcode_qrx_a), catTime),
+        QCode("QRZ", stringResource(R.string.qcode_qrz_q), stringResource(R.string.qcode_qrz_a), catCall),
+        QCode("QSA", stringResource(R.string.qcode_qsa_q), stringResource(R.string.qcode_qsa_a), catSignal),
+        QCode("QSB", stringResource(R.string.qcode_qsb_q), stringResource(R.string.qcode_qsb_a), catSignal),
+        QCode("QSD", stringResource(R.string.qcode_qsd_q), stringResource(R.string.qcode_qsd_a), catSignal),
+        QCode("QSK", stringResource(R.string.qcode_qsk_q), stringResource(R.string.qcode_qsk_a), catTechnical),
+        QCode("QSL", stringResource(R.string.qcode_qsl_q), stringResource(R.string.qcode_qsl_a), catConfirm),
+        QCode("QSO", stringResource(R.string.qcode_qso_q), stringResource(R.string.qcode_qso_a), catQso),
+        QCode("QSP", stringResource(R.string.qcode_qsp_q), stringResource(R.string.qcode_qsp_a), catRelay),
+        QCode("QST", stringResource(R.string.qcode_qst_q), stringResource(R.string.qcode_qst_a), catBroadcast),
+        QCode("QSX", stringResource(R.string.qcode_qsx_q), stringResource(R.string.qcode_qsx_a), catFrequency),
+        QCode("QSY", stringResource(R.string.qcode_qsy_q), stringResource(R.string.qcode_qsy_a), catFrequency),
+        QCode("QTC", stringResource(R.string.qcode_qtc_q), stringResource(R.string.qcode_qtc_a), catMessage),
+        QCode("QTH", stringResource(R.string.qcode_qth_q), stringResource(R.string.qcode_qth_a), catLocation),
+        QCode("QTR", stringResource(R.string.qcode_qtr_q), stringResource(R.string.qcode_qtr_a), catTime),
+    )
+}
 
 /**
  * Q Codes Dictionary Screen
@@ -106,8 +121,9 @@ fun QCodesScreen(
 ) {
     var searchQuery by remember { mutableStateOf("") }
     var isSearchActive by remember { mutableStateOf(false) }
+    val qCodesList = getLocalizedQCodes()
     
-    val filteredCodes by remember(searchQuery) {
+    val filteredCodes by remember(searchQuery, qCodesList) {
         derivedStateOf {
             if (searchQuery.isBlank()) {
                 qCodesList.distinctBy { it.code }

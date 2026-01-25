@@ -320,4 +320,97 @@
     <string name="qsl_delete">Delete</string>
     <string name="qsl_save_to_gallery_short">Save to Gallery</string>
     <string name="qsl_share_to_apps">Share to Other Apps</string>
+    
+    <!-- QSL Editor Extra -->
+    <string name="qsl_generate_card">Generate QSL Card</string>
+    <string name="qsl_workshop">QSL Card Workshop</string>
+    <string name="qsl_send_to">Send to %1$s</string>
+    <string name="qsl_save_to_gallery_desc">Save as PNG image to local gallery</string>
+    <string name="qsl_share_desc">Send to messaging apps, email, etc.</string>
+    
+    <!-- Propagation Extra -->
+    <string name="propagation_k_index_desc">K Index</string>
+    <string name="propagation_a_index_desc">A Index</string>
+    <string name="propagation_xray">X-Ray</string>
+    
+    <!-- Q Codes Categories -->
+    <string name="qcodes_cat_general">General</string>
+    <string name="qcodes_cat_frequency">Frequency</string>
+    <string name="qcodes_cat_signal">Signal</string>
+    <string name="qcodes_cat_interference">Interference</string>
+    <string name="qcodes_cat_power">Power</string>
+    <string name="qcodes_cat_speed">Speed</string>
+    <string name="qcodes_cat_time">Time</string>
+    <string name="qcodes_cat_call">Call</string>
+    <string name="qcodes_cat_technical">Technical</string>
+    <string name="qcodes_cat_confirm">Confirmation</string>
+    <string name="qcodes_cat_qso">QSO</string>
+    <string name="qcodes_cat_relay">Relay</string>
+    <string name="qcodes_cat_broadcast">Broadcast</string>
+    <string name="qcodes_cat_message">Message</string>
+    <string name="qcodes_cat_location">Location</string>
+    
+    <!-- Q Codes Content -->
+    <string name="qcode_qra_q">What is the name of your station?</string>
+    <string name="qcode_qra_a">The name of my station is...</string>
+    <string name="qcode_qrb_q">How far are you from my station?</string>
+    <string name="qcode_qrb_a">The distance is about... km</string>
+    <string name="qcode_qrg_q">Will you tell me my exact frequency?</string>
+    <string name="qcode_qrg_a">Your exact frequency is... kHz</string>
+    <string name="qcode_qrh_q">Does my frequency vary?</string>
+    <string name="qcode_qrh_a">Your frequency varies</string>
+    <string name="qcode_qri_q">How is the tone of my transmission?</string>
+    <string name="qcode_qri_a">The tone of your transmission is...</string>
+    <string name="qcode_qrk_q">What is the readability of my signals?</string>
+    <string name="qcode_qrk_a">The readability of your signals is... (1–5)</string>
+    <string name="qcode_qrl_q">Are you busy?</string>
+    <string name="qcode_qrl_a">I am busy, please do not interfere</string>
+    <string name="qcode_qrm_q">Are you being interfered with?</string>
+    <string name="qcode_qrm_a">I am being interfered with</string>
+    <string name="qcode_qrn_q">Are you troubled by static?</string>
+    <string name="qcode_qrn_a">I am troubled by static</string>
+    <string name="qcode_qro_q">Shall I increase power?</string>
+    <string name="qcode_qro_a">Increase power</string>
+    <string name="qcode_qrp_q">Shall I decrease power?</string>
+    <string name="qcode_qrp_a">Decrease power</string>
+    <string name="qcode_qrq_q">Shall I send faster?</string>
+    <string name="qcode_qrq_a">Send faster</string>
+    <string name="qcode_qrs_q">Shall I send more slowly?</string>
+    <string name="qcode_qrs_a">Send more slowly</string>
+    <string name="qcode_qrt_q">Shall I stop sending?</string>
+    <string name="qcode_qrt_a">Stop sending / I am closing down</string>
+    <string name="qcode_qru_q">Have you anything for me?</string>
+    <string name="qcode_qru_a">I have nothing for you</string>
+    <string name="qcode_qrv_q">Are you ready?</string>
+    <string name="qcode_qrv_a">I am ready</string>
+    <string name="qcode_qrx_q">When will you call me again?</string>
+    <string name="qcode_qrx_a">I will call you again at... hours</string>
+    <string name="qcode_qrz_q">Who is calling me?</string>
+    <string name="qcode_qrz_a">You are being called by... (on... kHz)</string>
+    <string name="qcode_qsa_q">What is the strength of my signals?</string>
+    <string name="qcode_qsa_a">The strength of your signals is... (1–5)</string>
+    <string name="qcode_qsb_q">Are my signals fading?</string>
+    <string name="qcode_qsb_a">Your signals are fading</string>
+    <string name="qcode_qsd_q">Is my keying defective?</string>
+    <string name="qcode_qsd_a">Your keying is defective</string>
+    <string name="qcode_qsk_q">Can you hear me between your signals?</string>
+    <string name="qcode_qsk_a">I can hear you between my signals, break in</string>
+    <string name="qcode_qsl_q">Can you acknowledge receipt?</string>
+    <string name="qcode_qsl_a">I acknowledge receipt</string>
+    <string name="qcode_qso_q">Can you communicate with... direct?</string>
+    <string name="qcode_qso_a">I can communicate with... direct</string>
+    <string name="qcode_qsp_q">Will you relay to...?</string>
+    <string name="qcode_qsp_a">I will relay to...</string>
+    <string name="qcode_qst_q">General call to all stations</string>
+    <string name="qcode_qst_a">General call to all stations</string>
+    <string name="qcode_qsx_q">Will you listen on... kHz?</string>
+    <string name="qcode_qsx_a">I am listening on... kHz</string>
+    <string name="qcode_qsy_q">Shall I change to another frequency?</string>
+    <string name="qcode_qsy_a">Change to... kHz</string>
+    <string name="qcode_qtc_q">How many messages have you to send?</string>
+    <string name="qcode_qtc_a">I have... messages to send</string>
+    <string name="qcode_qth_q">What is your location?</string>
+    <string name="qcode_qth_a">My location is...</string>
+    <string name="qcode_qtr_q">What is the correct time?</string>
+    <string name="qcode_qtr_a">The correct time is...</string>
 </resources>

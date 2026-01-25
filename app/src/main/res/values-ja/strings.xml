@@ -320,4 +320,97 @@
     <string name="qsl_delete">削除</string>
     <string name="qsl_save_to_gallery_short">ギャラリーに保存</string>
     <string name="qsl_share_to_apps">他のアプリに共有</string>
+    
+    <!-- QSL Editor Extra -->
+    <string name="qsl_generate_card">QSLカードを生成</string>
+    <string name="qsl_workshop">QSLカード作成</string>
+    <string name="qsl_send_to">%1$s に送信</string>
+    <string name="qsl_save_to_gallery_desc">PNG画像としてローカルギャラリーに保存</string>
+    <string name="qsl_share_desc">メッセージアプリやメールに送信</string>
+    
+    <!-- Propagation Extra -->
+    <string name="propagation_k_index_desc">K指数</string>
+    <string name="propagation_a_index_desc">A指数</string>
+    <string name="propagation_xray">X線</string>
+    
+    <!-- Q Codes Categories -->
+    <string name="qcodes_cat_general">一般</string>
+    <string name="qcodes_cat_frequency">周波数</string>
+    <string name="qcodes_cat_signal">信号</string>
+    <string name="qcodes_cat_interference">混信</string>
+    <string name="qcodes_cat_power">電力</string>
+    <string name="qcodes_cat_speed">速度</string>
+    <string name="qcodes_cat_time">時間</string>
+    <string name="qcodes_cat_call">呼出</string>
+    <string name="qcodes_cat_technical">技術</string>
+    <string name="qcodes_cat_confirm">確認</string>
+    <string name="qcodes_cat_qso">交信</string>
+    <string name="qcodes_cat_relay">中継</string>
+    <string name="qcodes_cat_broadcast">一斉</string>
+    <string name="qcodes_cat_message">電報</string>
+    <string name="qcodes_cat_location">位置</string>
+    
+    <!-- Q Codes Content -->
+    <string name="qcode_qra_q">あなたの局名は何ですか？</string>
+    <string name="qcode_qra_a">私の局名は…です</string>
+    <string name="qcode_qrb_q">私の局からどのくらい離れていますか？</string>
+    <string name="qcode_qrb_a">距離は約…kmです</string>
+    <string name="qcode_qrg_q">正確な周波数を教えてください</string>
+    <string name="qcode_qrg_a">あなたの正確な周波数は…kHzです</string>
+    <string name="qcode_qrh_q">私の周波数は変動していますか？</string>
+    <string name="qcode_qrh_a">あなたの周波数は変動しています</string>
+    <string name="qcode_qri_q">私の送信音調はどうですか？</string>
+    <string name="qcode_qri_a">あなたの送信音調は…です</string>
+    <string name="qcode_qrk_q">私の信号の了解度はいくつですか？</string>
+    <string name="qcode_qrk_a">あなたの信号の了解度は…(1–5)です</string>
+    <string name="qcode_qrl_q">お忙しいですか？</string>
+    <string name="qcode_qrl_a">私は忙しいです、妨害しないでください</string>
+    <string name="qcode_qrm_q">混信を受けていますか？</string>
+    <string name="qcode_qrm_a">混信を受けています</string>
+    <string name="qcode_qrn_q">空電障害を受けていますか？</string>
+    <string name="qcode_qrn_a">空電障害を受けています</string>
+    <string name="qcode_qro_q">送信電力を増加しましょうか？</string>
+    <string name="qcode_qro_a">送信電力を増加してください</string>
+    <string name="qcode_qrp_q">送信電力を減少しましょうか？</string>
+    <string name="qcode_qrp_a">送信電力を減少してください</string>
+    <string name="qcode_qrq_q">もっと速く送信しましょうか？</string>
+    <string name="qcode_qrq_a">もっと速く送信してください</string>
+    <string name="qcode_qrs_q">もっとゆっくり送信しましょうか？</string>
+    <string name="qcode_qrs_a">もっとゆっくり送信してください</string>
+    <string name="qcode_qrt_q">送信を中止しましょうか？</string>
+    <string name="qcode_qrt_a">送信を中止してください/私は閉局します</string>
+    <string name="qcode_qru_q">私宛の通信がありますか？</string>
+    <string name="qcode_qru_a">あなた宛の通信はありません</string>
+    <string name="qcode_qrv_q">準備はできていますか？</string>
+    <string name="qcode_qrv_a">準備ができています</string>
+    <string name="qcode_qrx_q">いつ再び呼び出しますか？</string>
+    <string name="qcode_qrx_a">…時に再び呼び出します</string>
+    <string name="qcode_qrz_q">誰が私を呼んでいますか？</string>
+    <string name="qcode_qrz_a">あなたは…から呼ばれています（…kHzで）</string>
+    <string name="qcode_qsa_q">私の信号の強度はいくつですか？</string>
+    <string name="qcode_qsa_a">あなたの信号の強度は…(1–5)です</string>
+    <string name="qcode_qsb_q">私の信号はフェージングしていますか？</string>
+    <string name="qcode_qsb_a">あなたの信号はフェージングしています</string>
+    <string name="qcode_qsd_q">私のキーイングに欠点がありますか？</string>
+    <string name="qcode_qsd_a">あなたのキーイングに欠点があります</string>
+    <string name="qcode_qsk_q">私の信号の間に聞こえますか？</string>
+    <string name="qcode_qsk_a">あなたの信号の間に聞こえます、ブレークインしてください</string>
+    <string name="qcode_qsl_q">受信確認できますか？</string>
+    <string name="qcode_qsl_a">受信確認します</string>
+    <string name="qcode_qso_q">…と直接通信できますか？</string>
+    <string name="qcode_qso_a">…と直接通信できます</string>
+    <string name="qcode_qsp_q">…に中継してくれますか？</string>
+    <string name="qcode_qsp_a">…に中継します</string>
+    <string name="qcode_qst_q">全局宛の一斉通報</string>
+    <string name="qcode_qst_a">全局宛の一斉通報</string>
+    <string name="qcode_qsx_q">…kHzで聴取しますか？</string>
+    <string name="qcode_qsx_a">…kHzで聴取しています</string>
+    <string name="qcode_qsy_q">周波数を変更しましょうか？</string>
+    <string name="qcode_qsy_a">…kHzに変更してください</string>
+    <string name="qcode_qtc_q">送信する電報は何通ありますか？</string>
+    <string name="qcode_qtc_a">送信する電報は…通あります</string>
+    <string name="qcode_qth_q">あなたの位置はどこですか？</string>
+    <string name="qcode_qth_a">私の位置は…です</string>
+    <string name="qcode_qtr_q">正確な時刻は何時ですか？</string>
+    <string name="qcode_qtr_a">正確な時刻は…です</string>
 </resources>
