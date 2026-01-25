@@ -294,7 +294,6 @@
     <string name="qsl_status_category_clublog">ClubLog</string>
     
     <!-- Propagation Screen Extra -->
-    <string name="propagation_retry">重试</string>
     <string name="propagation_failed">加载失败</string>
     <string name="propagation_data_updated">数据更新时间</string>
     <string name="propagation_solar_flux">太阳通量</string>

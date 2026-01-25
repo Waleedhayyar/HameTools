@@ -294,7 +294,6 @@
     <string name="qsl_status_category_clublog">ClubLog</string>
     
     <!-- Propagation Screen Extra -->
-    <string name="propagation_retry">Retry</string>
     <string name="propagation_failed">Loading failed</string>
     <string name="propagation_data_updated">Data updated</string>
     <string name="propagation_solar_flux">Solar Flux</string>
