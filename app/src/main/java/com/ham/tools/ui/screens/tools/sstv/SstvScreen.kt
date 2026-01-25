@@ -84,10 +84,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.ham.tools.R
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
@@ -218,16 +220,16 @@ fun SstvScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("SSTV 接收器") },
+                title = { Text(stringResource(R.string.sstv_title)) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "返回")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.common_back))
                     }
                 },
                 actions = {
                     if (uiState.isRecording) {
                         IconButton(onClick = { viewModel.resetDecoder() }) {
-                            Icon(Icons.Default.Refresh, contentDescription = "重置")
+                            Icon(Icons.Default.Refresh, contentDescription = stringResource(R.string.common_reset))
                         }
                     }
                 },
@@ -332,9 +334,9 @@ fun SstvScreen(
 
             Spacer(modifier = Modifier.height(12.dp))
 
-            // 最近完成图像（参考常见 SSTV 解码器的“RX 图像/历史”显示）
+            // 最近完成图像（参考常见 SSTV 解码器的"RX 图像/历史"显示）
             Text(
-                text = "最近完成",
+                text = stringResource(R.string.sstv_recent_completed),
                 style = MaterialTheme.typography.titleSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -373,7 +375,7 @@ fun SstvScreen(
             Spacer(modifier = Modifier.height(8.dp))
             
             Text(
-                text = "自由运行模式: 扫描线持续移动，即使是噪音也会显示",
+                text = stringResource(R.string.sstv_free_run_mode),
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f),
                 textAlign = TextAlign.Center
@@ -541,13 +543,13 @@ private fun RealTimeCanvasOutput(
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
-                        text = "点击开始接收",
+                        text = stringResource(R.string.sstv_tap_to_start),
                         style = MaterialTheme.typography.bodyMedium,
                         color = Color.White.copy(alpha = 0.7f)
                     )
                     Spacer(modifier = Modifier.height(4.dp))
                     Text(
-                        text = "自由运行模式：即使无信号也会显示雪花",
+                        text = stringResource(R.string.sstv_free_run_hint),
                         style = MaterialTheme.typography.bodySmall,
                         color = Color.White.copy(alpha = 0.4f),
                         textAlign = TextAlign.Center
@@ -578,7 +580,7 @@ private fun CompletedImageOutput(
         ) {
             if (bitmap == null) {
                 Text(
-                    text = "等待完整图像...",
+                    text = stringResource(R.string.sstv_wait_full_image),
                     style = MaterialTheme.typography.bodyMedium,
                     color = Color.White.copy(alpha = 0.6f)
                 )
@@ -629,17 +631,22 @@ private fun FreeRunningStatusBanner(
     val syncIcon = if (isSynced) "✓" else "○"
     val signalPercent = (signalStrength * 100).toInt()
     
+    val waitingText = stringResource(R.string.sstv_waiting)
+    val stoppedText = stringResource(R.string.sstv_stopped)
+    val frameCompleteText = stringResource(R.string.sstv_frame_complete)
+    val freeRunningText = stringResource(R.string.sstv_free_running)
+    
     val statusText = when {
-        !isRecording -> "等待启动..."
-        decoderState == FreeRunningSstvDecoder.RunState.STOPPED -> "已停止"
+        !isRecording -> waitingText
+        decoderState == FreeRunningSstvDecoder.RunState.STOPPED -> stoppedText
         decoderState == FreeRunningSstvDecoder.RunState.RUNNING || 
         decoderState == FreeRunningSstvDecoder.RunState.SYNCED -> {
             "$syncIcon ${selectedStrategy.modeName} | Line ${currentLine + 1}/$totalLines | Signal $signalPercent%"
         }
         decoderState == FreeRunningSstvDecoder.RunState.FRAME_COMPLETE -> {
-            "✓ 帧完成: ${selectedStrategy.modeName}"
+            "✓ $frameCompleteText: ${selectedStrategy.modeName}"
         }
-        else -> "自由运行中..."
+        else -> "$freeRunningText..."
     }
     
     Card(
@@ -730,12 +737,12 @@ private fun StrategySelector(
             ) {
                 Column {
                     Text(
-                        text = "自动模式检测",
+                        text = stringResource(R.string.sstv_auto_mode),
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.Medium
                     )
                     Text(
-                        text = if (autoModeDetection) "通过 VIS 码自动识别" else "手动选择模式",
+                        text = if (autoModeDetection) stringResource(R.string.sstv_auto_mode_on) else stringResource(R.string.sstv_auto_mode_off),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.7f)
                     )
@@ -776,7 +783,7 @@ private fun StrategySelector(
                         }
                         Icon(
                             imageVector = Icons.Default.KeyboardArrowDown,
-                            contentDescription = "选择模式",
+                            contentDescription = stringResource(R.string.sstv_select_mode),
                             tint = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
@@ -878,7 +885,7 @@ private fun TuningIndicator(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "调谐指示器",
+                    text = stringResource(R.string.sstv_tuning_indicator),
                     style = MaterialTheme.typography.labelMedium,
                     color = Color.White.copy(alpha = 0.7f)
                 )
@@ -988,10 +995,10 @@ private fun TuningIndicator(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
-                FrequencyTickLabel("1200", "同步", Color(0xFF00FF88))
-                FrequencyTickLabel("1500", "黑", Color(0xFF888888))
-                FrequencyTickLabel("1900", "VIS", Color(0xFFFFAA00))
-                FrequencyTickLabel("2300", "白", Color(0xFFFFFFFF))
+                FrequencyTickLabel("1200", stringResource(R.string.sstv_freq_sync), Color(0xFF00FF88))
+                FrequencyTickLabel("1500", stringResource(R.string.sstv_freq_black), Color(0xFF888888))
+                FrequencyTickLabel("1900", stringResource(R.string.sstv_vis), Color(0xFFFFAA00))
+                FrequencyTickLabel("2300", stringResource(R.string.sstv_freq_white), Color(0xFFFFFFFF))
             }
         }
     }
@@ -1019,14 +1026,22 @@ private fun FrequencyDisplayCompact(
     frequency: Float,
     modifier: Modifier = Modifier
 ) {
+    val noSignalText = stringResource(R.string.sstv_no_signal)
+    val syncText = stringResource(R.string.sstv_freq_sync)
+    val blackText = stringResource(R.string.sstv_black)
+    val visText = stringResource(R.string.sstv_vis)
+    val whiteText = stringResource(R.string.sstv_white)
+    val dataText = stringResource(R.string.sstv_data)
+    val noiseText = stringResource(R.string.sstv_noise)
+    
     val signalType = when {
-        frequency < 100f -> "无信号"
-        frequency in 1100f..1300f -> "同步"
-        frequency in 1400f..1600f -> "黑色"
-        frequency in 1800f..2000f -> "VIS"
-        frequency in 2200f..2400f -> "白色"
-        frequency in 1000f..2500f -> "数据"
-        else -> "噪音"
+        frequency < 100f -> noSignalText
+        frequency in 1100f..1300f -> syncText
+        frequency in 1400f..1600f -> blackText
+        frequency in 1800f..2000f -> visText
+        frequency in 2200f..2400f -> whiteText
+        frequency in 1000f..2500f -> dataText
+        else -> noiseText
     }
     
     val signalColor = when {
@@ -1079,7 +1094,7 @@ private fun ControlButtons(
             onClick = onRequestPermission,
             modifier = Modifier.fillMaxWidth().height(56.dp),
             colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
-        ) { Text("授权麦克风权限") }
+        ) { Text(stringResource(R.string.sstv_grant_permission)) }
     } else {
         Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             Button(
@@ -1093,7 +1108,7 @@ private fun ControlButtons(
                     RecordingIndicator()
                     Spacer(modifier = Modifier.width(8.dp))
                 }
-                Text(text = if (isRecording) "停止接收" else "开始接收", fontWeight = FontWeight.SemiBold)
+                Text(text = if (isRecording) stringResource(R.string.sstv_stop_receiving) else stringResource(R.string.sstv_start_receiving), fontWeight = FontWeight.SemiBold)
             }
             if (isRecording) {
                 OutlinedButton(onClick = onReset, modifier = Modifier.height(56.dp)) {
@@ -1121,7 +1136,7 @@ private fun PermissionStatusCard(hasPermission: Boolean, modifier: Modifier = Mo
             )
             Spacer(modifier = Modifier.width(12.dp))
             Text(
-                text = if (hasPermission) "麦克风已授权" else "需要麦克风权限",
+                text = if (hasPermission) stringResource(R.string.sstv_mic_granted) else stringResource(R.string.sstv_need_permission),
                 style = MaterialTheme.typography.bodyMedium,
                 fontWeight = FontWeight.Medium,
                 color = if (hasPermission) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onErrorContainer
@@ -1153,11 +1168,16 @@ private fun FreeRunningDecoderStatusCard(
         label = "stateColor"
     )
     
+    val stoppedStateText = stringResource(R.string.sstv_stopped)
+    val syncedStateText = stringResource(R.string.sstv_synced)
+    val freeRunStateText = stringResource(R.string.sstv_free_running)
+    val frameCompleteStateText = stringResource(R.string.sstv_frame_complete)
+    
     val stateDisplayName = when (decoderState) {
-        FreeRunningSstvDecoder.RunState.STOPPED -> "已停止"
-        FreeRunningSstvDecoder.RunState.RUNNING -> if (isSynced) "已同步" else "自由运行"
-        FreeRunningSstvDecoder.RunState.SYNCED -> "已同步"
-        FreeRunningSstvDecoder.RunState.FRAME_COMPLETE -> "帧完成"
+        FreeRunningSstvDecoder.RunState.STOPPED -> stoppedStateText
+        FreeRunningSstvDecoder.RunState.RUNNING -> if (isSynced) syncedStateText else freeRunStateText
+        FreeRunningSstvDecoder.RunState.SYNCED -> syncedStateText
+        FreeRunningSstvDecoder.RunState.FRAME_COMPLETE -> frameCompleteStateText
     }
     
     Card(
@@ -1177,9 +1197,10 @@ private fun FreeRunningDecoderStatusCard(
                         Box(modifier = Modifier.size(10.dp).clip(CircleShape).background(Color.Gray))
                     }
                     Spacer(modifier = Modifier.width(8.dp))
+                    val notStartedText = stringResource(R.string.sstv_not_started)
                     Column {
                         Text(
-                            text = if (isRecording) stateDisplayName else "未启动",
+                            text = if (isRecording) stateDisplayName else notStartedText,
                             style = MaterialTheme.typography.bodyMedium,
                             fontWeight = FontWeight.Medium
                         )

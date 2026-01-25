@@ -88,7 +88,7 @@ fun PropagationScreen(
                     IconButton(onClick = onNavigateBack) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "返回"
+                            contentDescription = stringResource(R.string.common_back)
                         )
                     }
                 },
@@ -97,7 +97,7 @@ fun PropagationScreen(
                     IconButton(onClick = { viewModel.refresh() }) {
                         Icon(
                             imageVector = Icons.Default.Refresh,
-                            contentDescription = "刷新"
+                            contentDescription = stringResource(R.string.propagation_refresh)
                         )
                     }
                 },
@@ -203,7 +203,7 @@ private fun ErrorContent(
                         onClick = onRetry,
                         contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
                     ) {
-                        Text("重试", style = MaterialTheme.typography.labelSmall)
+                        Text(stringResource(R.string.propagation_retry), style = MaterialTheme.typography.labelSmall)
                     }
                 }
             }
@@ -233,7 +233,7 @@ private fun ErrorContent(
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    text = "加载失败",
+                    text = stringResource(R.string.propagation_failed),
                     style = MaterialTheme.typography.titleLarge,
                     color = MaterialTheme.colorScheme.onSurface
                 )
@@ -252,7 +252,7 @@ private fun ErrorContent(
                         modifier = Modifier.size(18.dp)
                     )
                     Spacer(modifier = Modifier.width(8.dp))
-                    Text("重试")
+                    Text(stringResource(R.string.propagation_retry))
                 }
             }
         }
@@ -340,7 +340,7 @@ private fun UpdateInfoCard(
                 .padding(16.dp)
         ) {
             Text(
-                text = "数据更新时间",
+                text = stringResource(R.string.propagation_data_updated),
                 style = MaterialTheme.typography.labelSmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -405,7 +405,7 @@ private fun SolarIndicesCard(data: SolarData) {
                     IndexChip(
                         label = "SFI",
                         value = data.solarFlux.toString(),
-                        description = "太阳通量",
+                        description = stringResource(R.string.propagation_solar_flux),
                         color = getSfiColor(data.solarFlux)
                     )
                 }
@@ -427,17 +427,17 @@ private fun SolarIndicesCard(data: SolarData) {
                 }
                 item {
                     IndexChip(
-                        label = "地磁",
+                        label = stringResource(R.string.propagation_geomag),
                         value = data.geomagField,
-                        description = "地磁状态",
+                        description = stringResource(R.string.propagation_geomag_status),
                         color = getGeomagColor(data.geomagField)
                     )
                 }
                 item {
                     IndexChip(
-                        label = "噪声",
+                        label = stringResource(R.string.propagation_noise),
                         value = data.signalNoise,
-                        description = "信号噪声",
+                        description = stringResource(R.string.propagation_signal_noise),
                         color = MaterialTheme.colorScheme.surfaceVariant
                     )
                 }
@@ -451,10 +451,10 @@ private fun SolarIndicesCard(data: SolarData) {
                     horizontalArrangement = Arrangement.spacedBy(16.dp)
                 ) {
                     data.sunspots?.let {
-                        ExtraInfo(label = "太阳黑子", value = it.toString())
+                        ExtraInfo(label = stringResource(R.string.propagation_sunspots), value = it.toString())
                     }
                     data.solarWind?.let {
-                        ExtraInfo(label = "太阳风", value = "${it} km/s")
+                        ExtraInfo(label = stringResource(R.string.propagation_solar_wind), value = "${it} km/s")
                     }
                     data.xRay?.let {
                         ExtraInfo(label = "X射线", value = it)
@@ -573,7 +573,7 @@ private fun BandConditionsSection(
         
         if (conditions.isEmpty()) {
             Text(
-                text = "暂无数据",
+                text = stringResource(R.string.propagation_no_data),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

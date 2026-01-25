@@ -100,10 +100,12 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.ham.tools.R
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.ham.tools.data.model.QslPlaceholder
 import com.ham.tools.data.model.QslTemplate
@@ -197,7 +199,7 @@ fun QslEditorScreen(
                 },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "返回")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.common_back))
                     }
                 },
                 actions = {
@@ -205,7 +207,7 @@ fun QslEditorScreen(
                     IconButton(onClick = { viewModel.showExportDialog() }) {
                         Icon(
                             Icons.Outlined.Share,
-                            contentDescription = "导出"
+                            contentDescription = stringResource(R.string.qsl_export)
                         )
                     }
                     // 保存按钮
@@ -219,7 +221,7 @@ fun QslEditorScreen(
                             modifier = Modifier.size(18.dp)
                         )
                         Spacer(modifier = Modifier.width(6.dp))
-                        Text("保存")
+                        Text(stringResource(R.string.qsl_save))
                     }
                 },
                 scrollBehavior = scrollBehavior,
@@ -234,7 +236,7 @@ fun QslEditorScreen(
             ExtendedFloatingActionButton(
                 onClick = { viewModel.showAddElementDialog() },
                 icon = { Icon(Icons.Outlined.Add, contentDescription = null) },
-                text = { Text("添加元素") },
+                text = { Text(stringResource(R.string.qsl_add_element)) },
                 containerColor = MaterialTheme.colorScheme.primaryContainer,
                 contentColor = MaterialTheme.colorScheme.onPrimaryContainer
             )
@@ -389,7 +391,7 @@ fun QslEditorScreen(
                         modifier = Modifier.size(18.dp)
                     )
                     Spacer(modifier = Modifier.width(6.dp))
-                    Text("选择背景")
+                    Text(stringResource(R.string.qsl_select_background))
                 }
             }
             
@@ -399,7 +401,7 @@ fun QslEditorScreen(
             OutlinedTextField(
                 value = state.templateName,
                 onValueChange = { viewModel.updateTemplateName(it) },
-                label = { Text("模板名称") },
+                label = { Text(stringResource(R.string.qsl_template_name)) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp),
@@ -411,7 +413,7 @@ fun QslEditorScreen(
             
             // Color palette for background
             ColorPaletteSection(
-                title = "背景颜色",
+                title = stringResource(R.string.qsl_background_color),
                 selectedColor = state.backgroundColor,
                 onColorSelected = { viewModel.setBackgroundColor(it) },
                 modifier = Modifier.padding(horizontal = 16.dp)
@@ -479,7 +481,7 @@ private fun TemplateSelector(
     
     Column(modifier = modifier) {
         Text(
-            text = "我的模板",
+            text = stringResource(R.string.qsl_my_templates),
             style = MaterialTheme.typography.titleSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             fontWeight = FontWeight.Medium
@@ -511,13 +513,13 @@ private fun TemplateSelector(
                     ) {
                         Icon(
                             Icons.Outlined.Add,
-                            contentDescription = "新建模板",
+                            contentDescription = stringResource(R.string.qsl_new_template),
                             tint = MaterialTheme.colorScheme.primary,
                             modifier = Modifier.size(24.dp)
                         )
                         Spacer(modifier = Modifier.height(4.dp))
                         Text(
-                            text = "新建",
+                            text = stringResource(R.string.qsl_new),
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.primary
                         )
@@ -592,7 +594,7 @@ private fun TemplateSelector(
                                     ) {
                                         Icon(
                                             Icons.Filled.Check,
-                                            contentDescription = "默认",
+                                            contentDescription = stringResource(R.string.qsl_default),
                                             modifier = Modifier
                                                 .padding(2.dp)
                                                 .size(12.dp),
@@ -615,7 +617,7 @@ private fun TemplateSelector(
                                     ) {
                                         Icon(
                                             Icons.Outlined.Delete,
-                                            contentDescription = "删除",
+                                            contentDescription = stringResource(R.string.qsl_delete),
                                             modifier = Modifier
                                                 .padding(4.dp)
                                                 .size(14.dp),
@@ -635,8 +637,8 @@ private fun TemplateSelector(
     showDeleteDialog?.let { template ->
         AlertDialog(
             onDismissRequest = { showDeleteDialog = null },
-            title = { Text("删除模板") },
-            text = { Text("确定要删除模板 \"${template.name}\" 吗？此操作无法撤销。") },
+            title = { Text(stringResource(R.string.qsl_delete_template)) },
+            text = { Text(stringResource(R.string.qsl_delete_confirm, template.name)) },
             confirmButton = {
                 TextButton(
                     onClick = {
@@ -644,12 +646,12 @@ private fun TemplateSelector(
                         showDeleteDialog = null
                     }
                 ) {
-                    Text("删除", color = MaterialTheme.colorScheme.error)
+                    Text(stringResource(R.string.qsl_delete), color = MaterialTheme.colorScheme.error)
                 }
             },
             dismissButton = {
                 TextButton(onClick = { showDeleteDialog = null }) {
-                    Text("取消")
+                    Text(stringResource(R.string.common_cancel))
                 }
             }
         )
@@ -945,7 +947,7 @@ private fun ElementControls(
                 ) {
                     Icon(
                         Icons.Outlined.Delete,
-                        contentDescription = "删除",
+                        contentDescription = stringResource(R.string.qsl_delete),
                         tint = MaterialTheme.colorScheme.error,
                         modifier = Modifier.size(20.dp)
                     )
@@ -1056,7 +1058,7 @@ private fun AddElementDialog(
         onDismissRequest = onDismiss,
         title = { 
             Text(
-                "添加文字元素",
+                stringResource(R.string.qsl_add_text_element),
                 fontWeight = FontWeight.Bold
             ) 
         },
@@ -1085,7 +1087,7 @@ private fun AddElementDialog(
         confirmButton = {},
         dismissButton = {
             TextButton(onClick = onDismiss) {
-                Text("取消")
+                Text(stringResource(R.string.common_cancel))
             }
         }
     )
@@ -1121,7 +1123,7 @@ private fun ColorPickerDialog(
         onDismissRequest = onDismiss,
         title = { 
             Text(
-                "选择颜色",
+                stringResource(R.string.qsl_select_color),
                 fontWeight = FontWeight.Bold
             ) 
         },
@@ -1150,7 +1152,7 @@ private fun ColorPickerDialog(
         confirmButton = {},
         dismissButton = {
             TextButton(onClick = onDismiss) {
-                Text("取消")
+                Text(stringResource(R.string.common_cancel))
             }
         }
     )
@@ -1180,7 +1182,7 @@ private fun ExportDialog(
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 Text(
-                    text = "选择导出方式",
+                    text = stringResource(R.string.qsl_export_choose),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -1206,7 +1208,7 @@ private fun ExportDialog(
                         Spacer(modifier = Modifier.width(12.dp))
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = "保存到相册",
+                                text = stringResource(R.string.qsl_save_to_gallery),
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Medium,
                                 color = MaterialTheme.colorScheme.onPrimaryContainer
@@ -1247,7 +1249,7 @@ private fun ExportDialog(
                         Spacer(modifier = Modifier.width(12.dp))
                         Column(modifier = Modifier.weight(1f)) {
                             Text(
-                                text = "分享到其他应用",
+                                text = stringResource(R.string.qsl_share),
                                 style = MaterialTheme.typography.titleSmall,
                                 fontWeight = FontWeight.Medium,
                                 color = MaterialTheme.colorScheme.onSecondaryContainer
@@ -1274,7 +1276,7 @@ private fun ExportDialog(
                 onClick = onDismiss,
                 enabled = !isExporting
             ) {
-                Text("取消")
+                Text(stringResource(R.string.common_cancel))
             }
         }
     )

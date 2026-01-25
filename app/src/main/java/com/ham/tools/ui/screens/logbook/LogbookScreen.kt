@@ -88,6 +88,24 @@ import java.util.Locale
 import java.util.TimeZone
 
 /**
+ * 获取 QslStatus 的本地化短名称
+ */
+@Composable
+fun QslStatus.localizedShortName(): String {
+    return when (this) {
+        QslStatus.NOT_SENT -> stringResource(R.string.qsl_status_not_sent)
+        QslStatus.SENT -> stringResource(R.string.qsl_status_sent)
+        QslStatus.RECEIVED -> stringResource(R.string.qsl_status_received)
+        QslStatus.LOTW_UPLOADED -> stringResource(R.string.qsl_status_lotw_uploaded)
+        QslStatus.LOTW_CONFIRMED -> stringResource(R.string.qsl_status_lotw_confirmed)
+        QslStatus.EQSL_SENT -> stringResource(R.string.qsl_status_eqsl_sent)
+        QslStatus.EQSL_CONFIRMED -> stringResource(R.string.qsl_status_eqsl_confirmed)
+        QslStatus.CLUBLOG_UPLOADED -> stringResource(R.string.qsl_status_clublog_uploaded)
+        QslStatus.CLUBLOG_CONFIRMED -> stringResource(R.string.qsl_status_clublog_confirmed)
+    }
+}
+
+/**
  * Logbook Screen - Display QSO (contact) records
  */
 @OptIn(ExperimentalMaterial3Api::class)
@@ -379,7 +397,7 @@ private fun QsoLogCard(
                     color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.8f)
                 )
                 Text(
-                    text = log.qslStatus.shortName,
+                    text = log.qslStatus.localizedShortName(),
                     style = MaterialTheme.typography.labelSmall,
                     fontWeight = FontWeight.Medium,
                     color = when (log.qslStatus) {
@@ -692,7 +710,7 @@ private fun AddQsoBottomSheet(
                             FilterChip(
                                 selected = formState.qslStatus == status,
                                 onClick = { onQslStatusChange(status) },
-                                label = { Text(status.shortName, style = MaterialTheme.typography.labelSmall) },
+                                label = { Text(status.localizedShortName(), style = MaterialTheme.typography.labelSmall) },
                                 colors = FilterChipDefaults.filterChipColors(
                                     selectedContainerColor = MaterialTheme.colorScheme.tertiaryContainer,
                                     selectedLabelColor = MaterialTheme.colorScheme.onTertiaryContainer

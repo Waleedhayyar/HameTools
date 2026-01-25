@@ -37,9 +37,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.ham.tools.R
 
 /**
  * Q Code data class
@@ -123,10 +125,10 @@ fun QCodesScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Q 简语速查") },
+                title = { Text(stringResource(R.string.qcodes_title)) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "返回")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.common_back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -150,14 +152,14 @@ fun QCodesScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = if (isSearchActive) 0.dp else 16.dp),
-                placeholder = { Text("搜索 Q 简语...") },
+                placeholder = { Text(stringResource(R.string.qcodes_search_hint)) },
                 leadingIcon = {
                     Icon(Icons.Default.Search, contentDescription = null)
                 },
                 trailingIcon = {
                     if (searchQuery.isNotEmpty()) {
                         IconButton(onClick = { searchQuery = "" }) {
-                            Icon(Icons.Default.Clear, contentDescription = "清除")
+                            Icon(Icons.Default.Clear, contentDescription = stringResource(R.string.cw_clear))
                         }
                     }
                 },
@@ -186,7 +188,7 @@ fun QCodesScreen(
             
             // Results count
             Text(
-                text = "共 ${filteredCodes.size} 条",
+                text = stringResource(R.string.qcodes_count, filteredCodes.size),
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(horizontal = 16.dp)
@@ -295,7 +297,7 @@ private fun QCodeCard(qCode: QCode) {
             // Question
             Row {
                 Text(
-                    text = "问：",
+                    text = stringResource(R.string.qcodes_question),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.tertiary
@@ -312,7 +314,7 @@ private fun QCodeCard(qCode: QCode) {
             // Statement
             Row {
                 Text(
-                    text = "答：",
+                    text = stringResource(R.string.qcodes_answer),
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.primary

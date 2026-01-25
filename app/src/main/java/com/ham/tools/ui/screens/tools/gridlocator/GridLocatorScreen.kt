@@ -161,7 +161,7 @@ fun GridLocatorScreen(
                     IconButton(onClick = onNavigateBack) {
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                            contentDescription = "返回"
+                            contentDescription = stringResource(R.string.common_back)
                         )
                     }
                 },
@@ -563,11 +563,11 @@ private fun GridDisplayCard(
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
                 CoordinateChip(
-                    label = "纬度",
+                    label = stringResource(R.string.grid_locator_latitude),
                     value = String.format("%.6f°", latitude)
                 )
                 CoordinateChip(
-                    label = "经度",
+                    label = stringResource(R.string.grid_locator_longitude),
                     value = String.format("%.6f°", longitude)
                 )
             }
@@ -581,13 +581,13 @@ private fun GridDisplayCard(
             ) {
                 altitude?.let {
                     CoordinateChip(
-                        label = "海拔",
+                        label = stringResource(R.string.grid_locator_altitude),
                         value = String.format("%.1f m", it)
                     )
                 }
                 accuracy?.let {
                     CoordinateChip(
-                        label = "精度",
+                        label = stringResource(R.string.grid_locator_accuracy),
                         value = String.format("±%.1f m", it)
                     )
                 }
@@ -624,7 +624,7 @@ private fun GridDisplayCard(
                             type = "text/plain"
                             putExtra(Intent.EXTRA_TEXT, shareText)
                         }
-                        context.startActivity(Intent.createChooser(intent, "分享网格定位"))
+                        context.startActivity(Intent.createChooser(intent, context.getString(R.string.grid_locator_share_title)))
                     }
                 ) {
                     Icon(
@@ -875,13 +875,13 @@ private fun ManualCalculatorContent(
                                         state.calculatedGrid?.let { grid ->
                                             val clipboard = context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
                                             clipboard.setPrimaryClip(ClipData.newPlainText("Grid", grid))
-                                            Toast.makeText(context, "已复制", Toast.LENGTH_SHORT).show()
+                                            Toast.makeText(context, context.getString(R.string.grid_locator_copied), Toast.LENGTH_SHORT).show()
                                         }
                                     }
                                 ) {
                                     Icon(
                                         imageVector = Icons.Default.ContentCopy,
-                                        contentDescription = "复制"
+                                        contentDescription = stringResource(R.string.grid_locator_copy)
                                     )
                                 }
                             }

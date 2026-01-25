@@ -244,4 +244,81 @@
     <!-- Export Results -->
     <string name="export_success">成功导出 %1$d 条记录</string>
     <string name="export_error">导出失败: %1$s</string>
+    
+    <!-- CW Practice -->
+    <string name="cw_title">CW 发报练习</string>
+    <string name="cw_clear">清除</string>
+    <string name="cw_key">电键</string>
+    <string name="cw_dot">点 (Dit)</string>
+    <string name="cw_dash">划 (Dah)</string>
+    <string name="cw_dot_duration">&lt; 200ms</string>
+    <string name="cw_dash_duration">&gt; 200ms</string>
+    <string name="cw_hold_to_practice">按住电键开始练习</string>
+    <string name="cw_decode_result">解码结果</string>
+    <string name="cw_timeline_hint">按住下方电键，时间轴将显示您的点划序列</string>
+    
+    <!-- Q Codes -->
+    <string name="qcodes_title">Q 简语速查</string>
+    <string name="qcodes_search_hint">搜索 Q 简语...</string>
+    <string name="qcodes_count">共 %1$d 条</string>
+    <string name="qcodes_question">问：</string>
+    <string name="qcodes_answer">答：</string>
+    
+    <!-- SSTV Advanced -->
+    <string name="sstv_title">SSTV 接收器</string>
+    <string name="sstv_live_preview">实时预览</string>
+    <string name="sstv_wait_full_image">等待完整图像...</string>
+    <string name="sstv_free_run_mode">自由运行模式: 扫描线持续移动，即使是噪音也会显示</string>
+    <string name="sstv_free_run_hint">自由运行模式：即使无信号也会显示雪花</string>
+    <string name="sstv_signal">信号</string>
+    <string name="sstv_ms_per_line">ms/行</string>
+    <string name="sstv_vis">VIS</string>
+    <string name="sstv_black">黑色</string>
+    <string name="sstv_white">白色</string>
+    <string name="sstv_standby">STANDBY</string>
+    <string name="sstv_scanning">SCANNING</string>
+    
+    <!-- QSL Status -->
+    <string name="qsl_status_not_sent">未发卡</string>
+    <string name="qsl_status_sent">已发卡</string>
+    <string name="qsl_status_received">已收到</string>
+    <string name="qsl_status_lotw_uploaded">LoTW已上传</string>
+    <string name="qsl_status_lotw_confirmed">LoTW已确认</string>
+    <string name="qsl_status_eqsl_sent">eQSL已发送</string>
+    <string name="qsl_status_eqsl_confirmed">eQSL已确认</string>
+    <string name="qsl_status_clublog_uploaded">ClubLog已上传</string>
+    <string name="qsl_status_clublog_confirmed">ClubLog已确认</string>
+    <string name="qsl_status_category_card">实体卡片</string>
+    <string name="qsl_status_category_lotw">LoTW</string>
+    <string name="qsl_status_category_eqsl">eQSL</string>
+    <string name="qsl_status_category_clublog">ClubLog</string>
+    
+    <!-- Propagation Screen Extra -->
+    <string name="propagation_retry">重试</string>
+    <string name="propagation_failed">加载失败</string>
+    <string name="propagation_data_updated">数据更新时间</string>
+    <string name="propagation_solar_flux">太阳通量</string>
+    <string name="propagation_geomag_status">地磁状态</string>
+    <string name="propagation_signal_noise">信号噪声</string>
+    <string name="propagation_sunspots">太阳黑子</string>
+    <string name="propagation_solar_wind">太阳风</string>
+    <string name="propagation_no_data">暂无数据</string>
+    
+    <!-- Grid Locator Extra -->
+    <string name="grid_locator_latitude">纬度</string>
+    <string name="grid_locator_longitude">经度</string>
+    <string name="grid_locator_altitude">海拔</string>
+    <string name="grid_locator_accuracy">精度</string>
+    <string name="grid_locator_share_title">分享网格定位</string>
+    <string name="grid_locator_copied">已复制</string>
+    
+    <!-- QSL Editor Extra -->
+    <string name="qsl_save">保存</string>
+    <string name="qsl_add_text_element">添加文字元素</string>
+    <string name="qsl_select_color">选择颜色</string>
+    <string name="qsl_new">新建</string>
+    <string name="qsl_default">默认</string>
+    <string name="qsl_delete">删除</string>
+    <string name="qsl_save_to_gallery_short">保存到相册</string>
+    <string name="qsl_share_to_apps">分享到其他应用</string>
 </resources>

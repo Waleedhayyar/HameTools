@@ -244,4 +244,81 @@
     <!-- Export Results -->
     <string name="export_success">Successfully exported %1$d records</string>
     <string name="export_error">Export failed: %1$s</string>
+    
+    <!-- CW Practice -->
+    <string name="cw_title">CW Key Practice</string>
+    <string name="cw_clear">Clear</string>
+    <string name="cw_key">Key</string>
+    <string name="cw_dot">Dot (Dit)</string>
+    <string name="cw_dash">Dash (Dah)</string>
+    <string name="cw_dot_duration">&lt; 200ms</string>
+    <string name="cw_dash_duration">&gt; 200ms</string>
+    <string name="cw_hold_to_practice">Hold the key to practice</string>
+    <string name="cw_decode_result">Decoded Result</string>
+    <string name="cw_timeline_hint">Hold the key below, timeline will show your dit/dah sequence</string>
+    
+    <!-- Q Codes -->
+    <string name="qcodes_title">Q Codes Reference</string>
+    <string name="qcodes_search_hint">Search Q codes...</string>
+    <string name="qcodes_count">%1$d entries</string>
+    <string name="qcodes_question">Q:</string>
+    <string name="qcodes_answer">A:</string>
+    
+    <!-- SSTV Advanced -->
+    <string name="sstv_title">SSTV Receiver</string>
+    <string name="sstv_live_preview">Live Preview</string>
+    <string name="sstv_wait_full_image">Waiting for complete image...</string>
+    <string name="sstv_free_run_mode">Free run mode: Scanline keeps moving, noise will be shown</string>
+    <string name="sstv_free_run_hint">Free run mode: Shows static even without signal</string>
+    <string name="sstv_signal">Signal</string>
+    <string name="sstv_ms_per_line">ms/line</string>
+    <string name="sstv_vis">VIS</string>
+    <string name="sstv_black">Black</string>
+    <string name="sstv_white">White</string>
+    <string name="sstv_standby">STANDBY</string>
+    <string name="sstv_scanning">SCANNING</string>
+    
+    <!-- QSL Status -->
+    <string name="qsl_status_not_sent">Not Sent</string>
+    <string name="qsl_status_sent">Sent</string>
+    <string name="qsl_status_received">Received</string>
+    <string name="qsl_status_lotw_uploaded">LoTW Uploaded</string>
+    <string name="qsl_status_lotw_confirmed">LoTW Confirmed</string>
+    <string name="qsl_status_eqsl_sent">eQSL Sent</string>
+    <string name="qsl_status_eqsl_confirmed">eQSL Confirmed</string>
+    <string name="qsl_status_clublog_uploaded">ClubLog Uploaded</string>
+    <string name="qsl_status_clublog_confirmed">ClubLog Confirmed</string>
+    <string name="qsl_status_category_card">Physical Card</string>
+    <string name="qsl_status_category_lotw">LoTW</string>
+    <string name="qsl_status_category_eqsl">eQSL</string>
+    <string name="qsl_status_category_clublog">ClubLog</string>
+    
+    <!-- Propagation Screen Extra -->
+    <string name="propagation_retry">Retry</string>
+    <string name="propagation_failed">Loading failed</string>
+    <string name="propagation_data_updated">Data updated</string>
+    <string name="propagation_solar_flux">Solar Flux</string>
+    <string name="propagation_geomag_status">Geomag Status</string>
+    <string name="propagation_signal_noise">Signal Noise</string>
+    <string name="propagation_sunspots">Sunspots</string>
+    <string name="propagation_solar_wind">Solar Wind</string>
+    <string name="propagation_no_data">No data available</string>
+    
+    <!-- Grid Locator Extra -->
+    <string name="grid_locator_latitude">Latitude</string>
+    <string name="grid_locator_longitude">Longitude</string>
+    <string name="grid_locator_altitude">Altitude</string>
+    <string name="grid_locator_accuracy">Accuracy</string>
+    <string name="grid_locator_share_title">Share Grid Locator</string>
+    <string name="grid_locator_copied">Copied</string>
+    
+    <!-- QSL Editor Extra -->
+    <string name="qsl_save">Save</string>
+    <string name="qsl_add_text_element">Add Text Element</string>
+    <string name="qsl_select_color">Select Color</string>
+    <string name="qsl_new">New</string>
+    <string name="qsl_default">Default</string>
+    <string name="qsl_delete">Delete</string>
+    <string name="qsl_save_to_gallery_short">Save to Gallery</string>
+    <string name="qsl_share_to_apps">Share to Other Apps</string>
 </resources>

@@ -57,10 +57,12 @@ import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ham.tools.R
 import kotlin.math.PI
 import kotlin.math.sin
 
@@ -220,17 +222,17 @@ fun CwPracticeScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("CW 发报练习") },
+                title = { Text(stringResource(R.string.cw_title)) },
                 navigationIcon = {
                     IconButton(onClick = onNavigateBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "返回")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = stringResource(R.string.common_back))
                     }
                 },
                 actions = {
                     FilledTonalIconButton(
                         onClick = { morseElements.clear() }
                     ) {
-                        Icon(Icons.Default.Clear, contentDescription = "清除")
+                        Icon(Icons.Default.Clear, contentDescription = stringResource(R.string.cw_clear))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -273,8 +275,8 @@ fun CwPracticeScreen(
                     .padding(horizontal = 32.dp),
                 horizontalArrangement = Arrangement.SpaceEvenly
             ) {
-                TimingHint(label = "点 (Dit)", duration = "< 200ms")
-                TimingHint(label = "划 (Dah)", duration = "> 200ms")
+                TimingHint(label = stringResource(R.string.cw_dot), duration = stringResource(R.string.cw_dot_duration))
+                TimingHint(label = stringResource(R.string.cw_dash), duration = stringResource(R.string.cw_dash_duration))
             }
             
             Spacer(modifier = Modifier.height(32.dp))
@@ -337,7 +339,7 @@ fun CwPracticeScreen(
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
-                        text = "电键",
+                        text = stringResource(R.string.cw_key),
                         style = MaterialTheme.typography.titleMedium,
                         color = if (isKeyPressed) {
                             MaterialTheme.colorScheme.onPrimary
@@ -380,7 +382,7 @@ private fun MorseDecodedDisplay(
         ) {
             if (elements.isEmpty()) {
                 Text(
-                    text = "按住电键开始练习",
+                    text = stringResource(R.string.cw_hold_to_practice),
                     style = MaterialTheme.typography.headlineMedium,
                     fontFamily = FontFamily.Monospace,
                     fontWeight = FontWeight.Bold,
@@ -389,7 +391,7 @@ private fun MorseDecodedDisplay(
             } else {
                 // 解码后的字母显示
                 Text(
-                    text = "解码结果",
+                    text = stringResource(R.string.cw_decode_result),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -530,7 +532,7 @@ private fun MorseTimeline(
         ) {
             if (elements.isEmpty()) {
                 Text(
-                    text = "按住下方电键，时间轴将显示您的点划序列",
+                    text = stringResource(R.string.cw_timeline_hint),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )

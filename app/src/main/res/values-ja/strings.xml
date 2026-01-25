@@ -244,4 +244,81 @@
     <!-- Export Results -->
     <string name="export_success">%1$d件のレコードをエクスポートしました</string>
     <string name="export_error">エクスポートに失敗しました: %1$s</string>
+    
+    <!-- CW Practice -->
+    <string name="cw_title">CW電鍵練習</string>
+    <string name="cw_clear">クリア</string>
+    <string name="cw_key">電鍵</string>
+    <string name="cw_dot">短点 (Dit)</string>
+    <string name="cw_dash">長点 (Dah)</string>
+    <string name="cw_dot_duration">&lt; 200ms</string>
+    <string name="cw_dash_duration">&gt; 200ms</string>
+    <string name="cw_hold_to_practice">電鍵を押して練習開始</string>
+    <string name="cw_decode_result">デコード結果</string>
+    <string name="cw_timeline_hint">下の電鍵を押すと、タイムラインに短点/長点が表示されます</string>
+    
+    <!-- Q Codes -->
+    <string name="qcodes_title">Qコード一覧</string>
+    <string name="qcodes_search_hint">Qコードを検索...</string>
+    <string name="qcodes_count">%1$d件</string>
+    <string name="qcodes_question">質問：</string>
+    <string name="qcodes_answer">回答：</string>
+    
+    <!-- SSTV Advanced -->
+    <string name="sstv_title">SSTV受信機</string>
+    <string name="sstv_live_preview">リアルタイムプレビュー</string>
+    <string name="sstv_wait_full_image">完全な画像を待機中...</string>
+    <string name="sstv_free_run_mode">フリーランモード: スキャンラインは継続的に移動し、ノイズも表示されます</string>
+    <string name="sstv_free_run_hint">フリーランモード: 信号がなくてもスノーノイズを表示</string>
+    <string name="sstv_signal">信号</string>
+    <string name="sstv_ms_per_line">ms/ライン</string>
+    <string name="sstv_vis">VIS</string>
+    <string name="sstv_black">黒</string>
+    <string name="sstv_white">白</string>
+    <string name="sstv_standby">スタンバイ</string>
+    <string name="sstv_scanning">スキャン中</string>
+    
+    <!-- QSL Status -->
+    <string name="qsl_status_not_sent">未発送</string>
+    <string name="qsl_status_sent">発送済み</string>
+    <string name="qsl_status_received">受領済み</string>
+    <string name="qsl_status_lotw_uploaded">LoTWアップロード済み</string>
+    <string name="qsl_status_lotw_confirmed">LoTW確認済み</string>
+    <string name="qsl_status_eqsl_sent">eQSL送信済み</string>
+    <string name="qsl_status_eqsl_confirmed">eQSL確認済み</string>
+    <string name="qsl_status_clublog_uploaded">ClubLogアップロード済み</string>
+    <string name="qsl_status_clublog_confirmed">ClubLog確認済み</string>
+    <string name="qsl_status_category_card">物理カード</string>
+    <string name="qsl_status_category_lotw">LoTW</string>
+    <string name="qsl_status_category_eqsl">eQSL</string>
+    <string name="qsl_status_category_clublog">ClubLog</string>
+    
+    <!-- Propagation Screen Extra -->
+    <string name="propagation_retry">再試行</string>
+    <string name="propagation_failed">読み込みに失敗しました</string>
+    <string name="propagation_data_updated">データ更新時刻</string>
+    <string name="propagation_solar_flux">太陽フラックス</string>
+    <string name="propagation_geomag_status">地磁気状態</string>
+    <string name="propagation_signal_noise">信号ノイズ</string>
+    <string name="propagation_sunspots">太陽黒点</string>
+    <string name="propagation_solar_wind">太陽風</string>
+    <string name="propagation_no_data">データがありません</string>
+    
+    <!-- Grid Locator Extra -->
+    <string name="grid_locator_latitude">緯度</string>
+    <string name="grid_locator_longitude">経度</string>
+    <string name="grid_locator_altitude">標高</string>
+    <string name="grid_locator_accuracy">精度</string>
+    <string name="grid_locator_share_title">グリッドロケーターを共有</string>
+    <string name="grid_locator_copied">コピーしました</string>
+    
+    <!-- QSL Editor Extra -->
+    <string name="qsl_save">保存</string>
+    <string name="qsl_add_text_element">テキスト要素を追加</string>
+    <string name="qsl_select_color">色を選択</string>
+    <string name="qsl_new">新規</string>
+    <string name="qsl_default">デフォルト</string>
+    <string name="qsl_delete">削除</string>
+    <string name="qsl_save_to_gallery_short">ギャラリーに保存</string>
+    <string name="qsl_share_to_apps">他のアプリに共有</string>
 </resources>

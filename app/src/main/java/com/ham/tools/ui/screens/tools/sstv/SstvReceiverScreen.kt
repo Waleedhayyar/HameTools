@@ -58,6 +58,7 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.text.font.FontFamily
@@ -66,6 +67,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.ham.tools.R
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
@@ -269,7 +271,7 @@ private fun SstvTopBar(
             IconButton(onClick = onNavigateBack) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                    contentDescription = "返回",
+                    contentDescription = stringResource(R.string.common_back),
                     tint = Color.White
                 )
             }
@@ -317,10 +319,10 @@ private fun StatusBar(
             Spacer(modifier = Modifier.width(8.dp))
             Text(
                 text = when {
-                    !isRecording -> "STANDBY"
-                    isSynced -> "SYNCED"
-                    signalStrength > 0.3f -> "SIGNAL"
-                    else -> "SCANNING"
+                    !isRecording -> stringResource(R.string.sstv_standby)
+                    isSynced -> stringResource(R.string.sstv_synced).uppercase()
+                    signalStrength > 0.3f -> stringResource(R.string.sstv_signal).uppercase()
+                    else -> stringResource(R.string.sstv_scanning)
                 },
                 color = statusColor,
                 style = MaterialTheme.typography.labelMedium,
@@ -505,9 +507,9 @@ private fun ControlBar(
             Spacer(modifier = Modifier.width(12.dp))
             Text(
                 text = when {
-                    !hasPermission -> "需要麦克风权限"
-                    isRecording -> "停止解码"
-                    else -> "开始解码"
+                    !hasPermission -> stringResource(R.string.sstv_need_permission)
+                    isRecording -> stringResource(R.string.sstv_stop_decode)
+                    else -> stringResource(R.string.sstv_start_decode)
                 },
                 fontWeight = FontWeight.Bold,
                 fontSize = 16.sp
