@@ -37,6 +37,19 @@ HamTools 旨在为业余无线电爱好者提供一站式的移动端工具集�
 
 应用完全使用 Kotlin 语言开发，采用 Jetpack Compose 构建现代化的声明式 UI，遵循 MVVM 架构模式和 Clean Architecture 设计原则，确保代码的可维护性和可扩展性。
 
+### AI 辅助开发说明
+
+本项目是一次 **AI 辅助编程的实践探索**。整个项目从零开始，全程使用 **[Cursor](https://cursor.sh/)** 编辑器配合 **Claude Opus 4.5** 大语言模型完成开发。从项目架构设计、代码编写、UI 实现、Bug 修复到文档撰写，均在 AI 的协助下完成。
+
+这种开发模式展示了 AI 辅助编程在实际项目中的应用潜力：
+- **高效的代码生成**：AI 能够快速理解需求并生成符合最佳实践的代码
+- **架构设计建议**：在 MVVM、Clean Architecture 等架构模式的应用上提供专业指导
+- **问题诊断与修复**：快速定位和解决编译错误、运行时问题
+- **代码重构与优化**：持续改进代码质量和性能
+- **文档编写**：生成详尽的技术文档和使用说明
+
+当然，AI 辅助开发并不意味着完全自动化，开发者的判断、审查和决策仍然是项目成功的关键。
+
 ---
 
 ## 功能特性
@@ -624,7 +637,7 @@ HamTools 的开发离不开以下开源项目的支持：
 ```
 BSD 3-Clause License
 
-Copyright (c) 2024, HamTools Contributors
+Copyright (c) 2024, Xiongzikun0106
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -685,6 +698,6 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 ---
 
-**73 de HamTools Team** (｀・ω・´)ゞ
+**73 de Xiongzikun0106** (｀・ω・´)ゞ
 
 *祝您通联愉快，DX is waiting!*
